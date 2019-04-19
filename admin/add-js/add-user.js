@@ -98,6 +98,7 @@ function ADD() {
             $.each(dataz, function (key, data) {
                 var stt = count;
                 var ids = data.email;
+                 //  put danh sach thanh vien
                 $.ajax({
                     url: "https://api.mlab.com/api/1/databases/matrimony/collections/dashboard/5cb9461fe7179a264cf2f4a8&u=true?apiKey=GySvt0pxEYMX3O8Qu9hsQCLZv5r95Jig",
                     type: 'PUT',
@@ -186,7 +187,7 @@ function ADD() {
             });
         });
 }
-function edituser(satarid) {
+function edituesr(satarid) {
     var avatar = sessionStorage.getItem('avatar');
     var email = $('#email').val();
     var password = $('#password').val();

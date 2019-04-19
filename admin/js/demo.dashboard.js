@@ -1,5 +1,6 @@
 !function(r){
     "use strict";
+    //  lay ra  thanh vien
     var Dashboard  = "https://api.mlab.com/api/1/databases/matrimony/collections/dashboard/5cb9461fe7179a264cf2f4a8?apiKey=GySvt0pxEYMX3O8Qu9hsQCLZv5r95Jig";
 
     $.ajax({
