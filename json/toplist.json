@@ -1,0 +1,41 @@
+[
+  {
+    "id" : "0",
+    "username" : "Minh Anh",
+    "money" : "690000",
+    "qyt" : "67",
+    "createAt" : "2018-08-21T00:00:00"
+
+  },
+  {
+    "id" : "1",
+    "username" : "Nguyễn Thị Ngọc Yến ",
+    "money" : "1040000",
+    "qyt" : "40",
+    "createAt" : "2018-08-21T00:00:00"
+
+  },
+  {
+    "id" : "2",
+    "username" : "Hạnh Nguyễn",
+    "money" : "690000",
+    "qyt" : "30",
+    "createAt" : "2018-03-21T00:00:00"
+
+  },
+  {
+    "id" : "3",
+    "username" : "Ngọc Đầu Trọc",
+    "money" : "690000",
+    "qyt" : "50",
+    "createAt" : "2018-04-21T00:00:00"
+
+  }, {
+  "id" : "4",
+  "username" : "Quang Linh",
+  "money" : "690000",
+  "qyt" : "55",
+  "createAt" : "2018-01-21T00:00:00"
+
+}
+]

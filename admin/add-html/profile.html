@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Admin Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Quan ly " name="description">
+    <meta content="Admin" name="author">
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="../../images/logo.png">
+
+    <!-- third party css -->
+    <link href="../js/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css">
+    <!-- third party css end -->
+
+    <!-- App css -->
+    <!-- build:css -->
+    <link href="../css/app.min.css" rel="stylesheet" type="text/css">
+    <!-- endbuild -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <style type="text/css">/* Chart.js */
+    @-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style>
+</head>
+
+<body class="">
+
+<!-- Begin page -->
+<div class="wrapper">
+
+    <!-- ========== Left Sidebar Start ========== -->
+    <div class="left-side-menu active">
+
+        <div class="slimScrollDiv in">
+            <div class="slimscroll-menu active">
+
+                <!-- LOGO -->
+                <a href="index.html" class="logo text-center mb-4 active">
+                        <span class="logo-lg">
+                            <img src="../images/logo.png">
+                        </span>
+                    <span class="logo-sm">
+                            <img src="../images/logo.png">
+                        </span>
+                </a>
+
+                <!--- Sidemenu -->
+                <ul class="metismenu side-nav in">
+
+                    <li class="side-nav-title side-nav-item">Menu</li>
+
+                    <li class="side-nav-item">
+                        <a href="index.html" class="side-nav-link" aria-expanded="false">
+                            <i class="dripicons-meter"></i>
+                            <span class="badge badge-success float-right">7</span>
+                            <span> Bảng điều khiển  </span>
+                        </a>
+                    </li>
+
+                    <li class="side-nav-item">
+                        <a href="notification.html" class="side-nav-link" aria-expanded="false">
+                            <i class="dripicons-bell"></i>
+                            <span> Thông báo  </span>
+                        </a>
+                    </li>
+                    <li class="side-nav-item">
+                        <a href="blog.html" class="side-nav-link" aria-expanded="false">
+                            <i class="dripicons-document-edit"></i>
+                            <span> Blog  </span>
+                        </a>
+                    </li>
+                    <li class="side-nav-item">
+                        <a href="add-user.html" class="side-nav-link" aria-expanded="false">
+                            <i class="dripicons-user"></i>
+                            <span>Người dùng</span>
+                        </a>
+                    </li>
+                    <li class="side-nav-item">
+                        <a href="add-pairing.html" class="side-nav-link" aria-expanded="false">
+                            <i class="dripicons-heart"></i>
+                            <span> Ghép đôi </span>
+                        </a>
+                    </li>
+                    <li class="side-nav-item">
+                        <a href="mailbox.html" class="side-nav-link" aria-expanded="false">
+                            <i class="dripicons-mail"></i>
+                            <span>Hộp thư</span>
+                        </a>
+                    </li>
+                    <li class="side-nav-item">
+                        <a href="setting.html" class="side-nav-link" aria-expanded="false">
+                            <i class="dripicons-gear"></i>
+                            <span>Cài đặt</span>
+                        </a>
+                    </li>
+                    <li class="side-nav-item">
+                        <a href="about.html" class="side-nav-link" aria-expanded="false">
+                            <i class="dripicons-information"></i>
+                            <span>Giới thiệu</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- End Sidebar -->
+
+                <div class="clearfix"></div>
+
+            </div>
+            <div class="slimScrollBar"></div>
+            <div class="slimScrollRail"></div>
+        </div>
+        <!-- Sidebar -left -->
+
+    </div>
+    <!-- Left Sidebar End -->
+
+    <!-- ============================================================== -->
+    <!-- Start Page Content here -->
+    <!-- ============================================================== -->
+
+    <div class="content-page">
+        <div class="content">
+
+            <!-- Topbar Start -->
+            <div class="navbar-custom">
+                <ul class="list-unstyled topbar-right-menu float-right mb-0">
+
+                    <li class="dropdown notification-list">
+                        <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <i class="dripicons-bell noti-icon"></i>
+                            <span class="noti-icon-badge"></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated dropdown-lg">
+
+                            <!-- item-->
+                            <div class="dropdown-item noti-title">
+                                <h5 class="m-0">
+                                            <span class="float-right">
+                                                <a href="javascript: void(0);" class="text-dark">
+                                                    <small>Xoá tất cả</small>
+                                                </a>
+                                            </span>Thông báo
+                                </h5>
+                            </div>
+
+                            <div class="slimScrollDiv" ><div class="slimscroll" >
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-primary">
+                                        <i class="mdi mdi-comment-account-outline"></i>
+                                    </div>
+                                    <p class="notify-details">Caleb Flakelar commented on Admin
+                                        <small class="text-muted">1 min ago</small>
+                                    </p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-info">
+                                        <i class="mdi mdi-account-plus"></i>
+                                    </div>
+                                    <p class="notify-details">New user registered.
+                                        <small class="text-muted">5 hours ago</small>
+                                    </p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon">
+                                        <img src="" class="img-fluid rounded-circle" alt=""> </div>
+                                    <p class="notify-details">Cristina Pride</p>
+                                    <p class="text-muted mb-0 user-msg">
+                                        <small>Hi, How are you? What about our next meeting</small>
+                                    </p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-primary">
+                                        <i class="mdi mdi-comment-account-outline"></i>
+                                    </div>
+                                    <p class="notify-details">Caleb Flakelar commented on Admin
+                                        <small class="text-muted">4 days ago</small>
+                                    </p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon">
+                                        <img src="" class="img-fluid rounded-circle" alt=""> </div>
+                                    <p class="notify-details">Karen Robinson</p>
+                                    <p class="text-muted mb-0 user-msg">
+                                        <small>Wow ! this admin looks good and awesome design</small>
+                                    </p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-info">
+                                        <i class="mdi mdi-heart"></i>
+                                    </div>
+                                    <p class="notify-details">Carlos Crouch liked
+                                        <b>Admin</b>
+                                        <small class="text-muted">13 days ago</small>
+                                    </p>
+                                </a>
+                            </div><div class="slimScrollBar" style="background: rgb(158, 165, 171); width: 8px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 138.482px;"></div><div class="slimScrollRail" style="width: 8px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+
+                            <!-- All-->
+                            <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+                                View All
+                            </a>
+
+                        </div>
+                    </li>
+
+                    <li class="dropdown notification-list">
+                        <a class="nav-link dropdown-toggle nav-user arrow-none mr-0 userprofile"  data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated profile-dropdown" x-placement="bottom-end">
+                            <!-- item-->
+                            <div class=" dropdown-header noti-title">
+                                <h6 class="text-overflow m-0" id="nameuser"></h6>
+                            </div>
+
+                            <!-- item-->
+                            <a href="profile.html" class="dropdown-item notify-item">
+                                <i class="mdi mdi-account-circle"></i>
+                                <span>Tài khoản của tôi</span>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <i class="mdi mdi-account-settings-variant"></i>
+                                <span>Cài đặt</span>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <i class="mdi mdi-lifebuoy"></i>
+                                <span>Trợ giúp</span>
+                            </a>
+
+                            <!-- item-->
+                            <a href="" id="logout" class="dropdown-item notify-item">
+                                <i class="mdi mdi-logout"></i>
+                                <span>Đăng xuất</span>
+                            </a>
+
+                        </div>
+                    </li>
+                    <li class="dropdown notification-list">
+                        <a href="javascript:void(0);" class="nav-link right-bar-toggle mr-0">
+                            <i class="mdi mdi-message noti-icon"></i>
+                            <span class="badge badge-danger noti-icon-badge">1</span>
+                        </a>
+                    </li>
+                </ul>
+                <button class="button-menu-mobile open-left disable-btn">
+                    <i class="mdi mdi-menu"></i>
+                </button>
+                <div class="app-search">
+                    <form>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search...">
+                            <span class="mdi mdi-magnify"></span>
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="submit">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- end Topbar -->
+
+            <!-- Start Content-->
+            <div class="container-fluid">
+
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box">
+                            <div class="page-title-right">
+                                <ol class="breadcrumb m-0">
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Hyper</a></li>
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Pages</a></li>
+                                    <li class="breadcrumb-item active">Profile</li>
+                                </ol>
+                            </div>
+                            <h4 class="page-title">Hồ sơ</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- end page title -->
+
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <!-- Profile -->
+                        <div class="card bg-primary">
+                            <div class="card-body profile-user-box">
+
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <div class="media" id="media">
+
+                                        </div>
+                                    </div> <!-- end col-->
+                                <div class="col-sm-4">
+                                    <div class="text-center mt-sm-0 mt-3 text-sm-right">
+                                        <button type="button" class="btn btn-light" data-toggle="modal" data-target="#edit-profile-modal">
+                                            <i class="mdi mdi-account-settings-variant mr-1"></i> Chỉnh sửa thông tin
+                                        </button>
+                                    </div>
+                                </div> <!-- end col-->
+                                </div> <!-- end row -->
+                            </div> <!-- end card-body/ profile-user-box-->
+                        </div><!--end profile/ card -->
+                    </div> <!-- end col-->
+                </div>
+                <!-- end row -->
+
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <!-- Personal-Information -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title mt-0 mb-3">Seller Information</h4>
+                                <p class="text-muted font-13" id="text-description">
+
+                                </p>
+
+                                <hr>
+
+                                <div class="text-left">
+                                    <p class="text-muted"><strong>Full Name :</strong> <span class="ml-2">Michael A. Franklin</span></p>
+
+                                    <p class="text-muted"><strong>Mobile :</strong><span class="ml-2">(+12) 123 1234 567</span></p>
+
+                                    <p class="text-muted"><strong>Email :</strong> <span class="ml-2">coderthemes@gmail.com</span></p>
+
+                                    <p class="text-muted"><strong>Location :</strong> <span class="ml-2">USA</span></p>
+
+                                    <p class="text-muted"><strong>Languages :</strong>
+                                        <span class="ml-2"> English, German, Spanish </span>
+                                    </p>
+                                    <p class="text-muted mb-0"><strong>Elsewhere :</strong>
+                                        <a class="d-inline-block ml-2 text-muted" title="" data-placement="top" data-toggle="tooltip" href="" data-original-title="Facebook"><i class="mdi mdi-facebook"></i></a>
+                                        <a class="d-inline-block ml-2 text-muted" title="" data-placement="top" data-toggle="tooltip" href="" data-original-title="Twitter"><i class="mdi mdi-twitter"></i></a>
+                                        <a class="d-inline-block ml-2 text-muted" title="" data-placement="top" data-toggle="tooltip" href="" data-original-title="Skype"><i class="mdi mdi-skype"></i></a>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Personal-Information -->
+
+                        <!-- Toll free number box-->
+                        <div class="card text-white bg-info">
+                            <div class="card-body">
+                                <div class="toll-free-box text-center">
+                                    <h4> <i class="mdi mdi-deskphone"></i> Toll Free : 1-234-567-8901</h4>
+                                </div>
+                            </div> <!-- end card-body-->
+                        </div> <!-- end card-->
+                        <!-- End Toll free number box-->
+
+                        <!-- Messages-->
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title mb-3">Messages</h4>
+
+                                <div class="inbox-widget">
+                                    <!--<div class="inbox-item">-->
+                                        <!--<div class="inbox-item-img"><img src="" class="rounded-circle" alt=""></div>-->
+                                        <!--<p class="inbox-item-author">Tomaslau</p>-->
+                                        <!--<p class="inbox-item-text">I've finished it! See you so...</p>-->
+                                        <!--<p class="inbox-item-date">-->
+                                            <!--<a href="#" class="btn btn-sm btn-link text-info font-13"> Reply </a>-->
+                                        <!--</p>-->
+                                    <!--</div>-->
+
+
+                                </div> <!-- end inbox-widget -->
+                            </div> <!-- end card-body-->
+                        </div> <!-- end card-->
+
+                    </div> <!-- end col-->
+
+                    <div class="col-md-8">
+
+                        <!-- Chart-->
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title mb-3">Orders &amp; Revenue</h4>
+                                <div style="height: 260px;" class="chartjs-chart"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                                    <canvas id="high-performing-product" width="1378" height="520" class="chartjs-render-monitor" style="display: block; height: 260px; width: 689px;"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Chart-->
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="card tilebox-one">
+                                    <div class="card-body">
+                                        <i class="dripicons-basket float-right text-muted"></i>
+                                        <h6 class="text-muted text-uppercase mt-0">Orders</h6>
+                                        <h2 class="m-b-20">1,587</h2>
+                                        <span class="badge badge-primary"> +11% </span> <span class="text-muted">From previous period</span>
+                                    </div> <!-- end card-body-->
+                                </div> <!--end card-->
+                            </div><!-- end col -->
+
+                            <div class="col-sm-4">
+                                <div class="card tilebox-one">
+                                    <div class="card-body">
+                                        <i class="dripicons-box float-right text-muted"></i>
+                                        <h6 class="text-muted text-uppercase mt-0">Revenue</h6>
+                                        <h2 class="m-b-20">$<span>46,782</span></h2>
+                                        <span class="badge badge-danger"> -29% </span> <span class="text-muted">From previous period</span>
+                                    </div> <!-- end card-body-->
+                                </div> <!--end card-->
+                            </div><!-- end col -->
+
+                            <div class="col-sm-4">
+                                <div class="card tilebox-one">
+                                    <div class="card-body">
+                                        <i class="dripicons-jewel float-right text-muted"></i>
+                                        <h6 class="text-muted text-uppercase mt-0">Product Sold</h6>
+                                        <h2 class="m-b-20">1,890</h2>
+                                        <span class="badge badge-primary"> +89% </span> <span class="text-muted">Last year</span>
+                                    </div> <!-- end card-body-->
+                                </div> <!--end card-->
+                            </div><!-- end col -->
+
+                        </div>
+                        <!-- end row -->
+
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title mb-3">My Products</h4>
+
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-centered mb-0">
+                                        <thead>
+                                        <tr>
+                                            <th>Product</th>
+                                            <th>Price</th>
+                                            <th>Stock</th>
+                                            <th>Amount</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>ASOS Ridley High Waist</td>
+                                            <td>$79.49</td>
+                                            <td><span class="badge badge-primary">82 Pcs</span></td>
+                                            <td>$6,518.18</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Marco Lightweight Shirt</td>
+                                            <td>$128.50</td>
+                                            <td><span class="badge badge-primary">37 Pcs</span></td>
+                                            <td>$4,754.50</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Half Sleeve Shirt</td>
+                                            <td>$39.99</td>
+                                            <td><span class="badge badge-primary">64 Pcs</span></td>
+                                            <td>$2,559.36</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lightweight Jacket</td>
+                                            <td>$20.00</td>
+                                            <td><span class="badge badge-primary">184 Pcs</span></td>
+                                            <td>$3,680.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Marco Shoes</td>
+                                            <td>$28.49</td>
+                                            <td><span class="badge badge-primary">69 Pcs</span></td>
+                                            <td>$1,965.81</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div> <!-- end table responsive-->
+                            </div> <!-- end col-->
+                        </div> <!-- end row-->
+
+                    </div>
+                    <!-- end col -->
+
+                </div>
+                <!-- end row -->
+
+            </div> <!-- container -->
+
+        </div>
+        <!-- content -->
+
+        <!-- Footer Start -->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        2018 © Metrimony
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-md-right footer-links d-none d-sm-block">
+                            <a href="javascript: void(0);">About</a>
+                            <a href="javascript: void(0);">Support</a>
+                            <a href="javascript: void(0);">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end Footer -->
+
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- End Page content -->
+    <!-- ============================================================== -->
+
+
+</div>
+<!-- END wrapper -->
+
+<!-- Right Sidebar -->
+<div class="right-bar">
+
+    <div class="rightbar-title">
+        <a href="javascript:void(0);" class="right-bar-toggle float-right">
+            <i class="dripicons-cross noti-icon"></i>
+        </a>
+        <h5 class="m-0">Tin nhắn </h5>
+    </div>
+
+    <div class="slimScrollDiv">
+        <div class="slimscroll-menu">
+
+            <!-- Settings -->
+            <hr class="mt-0">
+            <h5 class="pl-3">Danh sách người dùng </h5>
+            <hr class="mb-0">
+
+            <div class="p-3" >
+                <ul id="user-list" class="client-list">
+
+                </ul>
+
+
+                <!--<div class="custom-control custom-checkbox mb-2">-->
+                <!--<input type="checkbox" class="custom-control-input" id="notifications-check" checked="">-->
+                <!--<label class="custom-control-label" for="notifications-check">Thông báo</label>-->
+                <!--</div>-->
+
+                <!--<div class="custom-control custom-checkbox mb-2">-->
+                <!--<input type="checkbox" class="custom-control-input" id="api-access-check">-->
+                <!--<label class="custom-control-label" for="api-access-check">Truy cập API</label>-->
+                <!--</div>-->
+
+                <!--<div class="custom-control custom-checkbox mb-2">-->
+                <!--<input type="checkbox" class="custom-control-input" id="auto-updates-check" checked="">-->
+                <!--<label class="custom-control-label" for="auto-updates-check">-->
+                <!--Cập nhật tự động</label>-->
+                <!--</div>-->
+
+                <!--<div class="custom-control custom-checkbox mb-2">-->
+                <!--<input type="checkbox" class="custom-control-input" id="online-status-check" checked="">-->
+                <!--<label class="custom-control-label" for="online-status-check">Trạng thái trực tuyến</label>-->
+                <!--</div>-->
+
+                <!--<div class="custom-control custom-checkbox mb-2">-->
+                <!--<input type="checkbox" class="custom-control-input" id="auto-payout-check">-->
+                <!--<label class="custom-control-label" for="auto-payout-check">Tự động thanh toán</label>-->
+                <!--</div>-->
+
+            </div>
+        </div>
+        <div class="slimScrollBar" ></div>
+        <div class="slimScrollRail"></div>
+    </div>
+</div>
+<!-- /Right-bar -->
+<!--Add model edit profile-->
+<div class="modal fade show" id="edit-profile-modal" tabindex="-1" role="dialog" aria-labelledby="NewProfileModalLabel">
+    <div class="modal-dialog modal-dialog-centered modal-lg" >
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="NewProfileModalLabel">Cập nhâp hồ sơ</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <form class="p-2">
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="edituser" class="data">Tên người dùng</label>
+                                <input type="text" class="form-control form-control-light" id="edituser"  placeholder=" '+data-fullname+' ">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="editemail">Địa chỉ mail</label>
+                                <input type="text" class="form-control form-control-light" id="editemail" placeholder="Nhập địa chỉ mail">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="profile-password">Thay đổi mật khẩu</label>
+                                <input type="text" class="form-control form-control-light" id="profile-password" placeholder="Nhập mật khẩu">
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user_img">Hình ảnh</label>
+                                <input type="file" name="user_img" id="user_img" class="form-control form-control-light">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group" id="view-img-avatar">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="profile-description">Thông tin khác</label>
+                        <textarea class="form-control form-control-light" id="profile-description" rows="3"></textarea>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="profile-title">Chức danh</label>
+                                <select class="form-control form-control-light" id="profile-title">
+                                    <option value="Quản lý">Quản lý</option>
+                                    <option value="">Kĩ thuật</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="profile-priority">Ngày tháng</label>
+                                <input type="text" class="form-control form-control-light" id="profile-priority" data-toggle="date-picker" data-single-date-picker="true">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-right">
+                        <button type="button" class="btn btn-light" data-dismiss="modal">Thoát</button>
+                        <button type="submit" name="submit" id="profile-update" class="btn btn-primary">Cập nhập</button>
+                    </div>
+                </form>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+<!--Messchat-->
+<div id="message-box">
+    <div class="message-conten">
+        <div class="card  text-dark mb-0">
+            <div class="card-header header-fixd-card bg-info">
+                <div class="card-widgets text-white">
+                    <span class="sent bg-d"></span>
+                    <a href="javascript:;" data-toggle="reload"><i class="mdi mdi-refresh"></i></a>
+                    <a data-toggle="collapse" href="#cardCollpase1" role="button" aria-expanded="false" aria-controls="cardCollpase1"><i class="mdi mdi-minus"></i></a>
+                    <a href="#" data-toggle="remove"><i class="mdi mdi-close"></i></a>
+                </div>
+
+                <h5 class="card-title mb-0 title-user  text-white">
+
+                </h5>
+
+            </div>
+            <div id="cardCollpase1"  class="card-body pr-0 pl-0 pt-0 pb-0 collapse show ">
+                <div class="message-conten-text">
+                    <div id="show-model">
+
+                    </div>
+                </div>
+                <div class="form-group mb-0">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="messageInput" placeholder="Nhập tin nhắn..." aria-label="">
+                    </div>
+                </div>
+                <div class="form-group pr-1 pl-1 mt-0 mb-0 pt-0 pb-0 font-weight-normal">
+                    <a href="#" data-toggle="popover" data-container="body" data-placement="top" data-trigger="focus"  data-content="">
+                        <i class="mdi mdi-emoticon-happy font-18"></i>
+                    </a>
+                    <a class="s" href>
+                        <input type="file" name="attachment[]" id="sent-message" class="" title="Thêm ảnh" multiple>
+                        <label for="sent-message">
+                            <i class="dripicons-photo font-18"></i>
+                        </label>
+                    </a>
+                    <a href="#" class="" data-toggle="popover" data-container="body" data-placement="top" data-trigger="focus"  data-content="">
+                        <i class="dripicons-paperclip font-18"></i>
+                    </a>
+                    <a href="#" class="float-md-right" data-toggle="popover" data-container="body" data-placement="top" data-trigger="focus"  data-content="">
+                        <i class="dripicons-thumbs-up font-18"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- bundle -->
+<script src="../js/app.min.js"></script>
+
+<!-- third party js -->
+<!--<script src="jquery.min.js"></script>-->
+<script src="../add-js/profile.js"></script>
+<script src="../js/Chart.js"></script>
+<script src="../js/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="../js/jquery-jvectormap-world-mill-en.js"></script>
+<!-- third party js ends -->
+
+<!-- demo app -->
+<script src="../js/demo.dashboard.js"></script>
+<div class="daterangepicker ltr single auto-apply opensright show-calendar" style="top: 134.375px; left: 1072.88px; right: auto; display: none;">
+    <div class="ranges"></div><div class="drp-calendar left single" style="display: block;">
+    <div class="calendar-table"><table class="table-condensed"><thead>
+    <tr><th class="prev available"><span></span></th><th colspan="5" class="month">Aug 2018</th><th class="next available"><span></span></th></tr><tr><th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th></tr></thead><tbody><tr><td class="weekend off available" data-title="r0c0">29</td><td class="off available" data-title="r0c1">30</td><td class="off available" data-title="r0c2">31</td><td class="available" data-title="r0c3">1</td><td class="available" data-title="r0c4">2</td><td class="available" data-title="r0c5">3</td><td class="weekend available" data-title="r0c6">4</td></tr><tr><td class="weekend available" data-title="r1c0">5</td><td class="available" data-title="r1c1">6</td><td class="available" data-title="r1c2">7</td><td class="available" data-title="r1c3">8</td><td class="today active start-date active end-date available" data-title="r1c4">9</td><td class="available" data-title="r1c5">10</td><td class="weekend available" data-title="r1c6">11</td></tr><tr><td class="weekend available" data-title="r2c0">12</td><td class="available" data-title="r2c1">13</td><td class="available" data-title="r2c2">14</td><td class="available" data-title="r2c3">15</td><td class="available" data-title="r2c4">16</td><td class="available" data-title="r2c5">17</td><td class="weekend available" data-title="r2c6">18</td></tr><tr><td class="weekend available" data-title="r3c0">19</td><td class="available" data-title="r3c1">20</td><td class="available" data-title="r3c2">21</td><td class="available" data-title="r3c3">22</td><td class="available" data-title="r3c4">23</td><td class="available" data-title="r3c5">24</td><td class="weekend available" data-title="r3c6">25</td></tr><tr><td class="weekend available" data-title="r4c0">26</td><td class="available" data-title="r4c1">27</td><td class="available" data-title="r4c2">28</td><td class="available" data-title="r4c3">29</td><td class="available" data-title="r4c4">30</td><td class="available" data-title="r4c5">31</td><td class="weekend off available" data-title="r4c6">1</td></tr><tr><td class="weekend off available" data-title="r5c0">2</td><td class="off available" data-title="r5c1">3</td><td class="off available" data-title="r5c2">4</td><td class="off available" data-title="r5c3">5</td><td class="off available" data-title="r5c4">6</td><td class="off available" data-title="r5c5">7</td><td class="weekend off available" data-title="r5c6">8</td></tr></tbody></table></div><div class="calendar-time" style="display: none;"></div></div><div class="drp-calendar right" style="display: none;"><div class="calendar-table"><table class="table-condensed"><thead><tr><th></th><th colspan="5" class="month">Sep 2018</th><th class="next available"><span></span></th></tr><tr><th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th></tr></thead><tbody><tr><td class="weekend off available" data-title="r0c0">26</td><td class="off available" data-title="r0c1">27</td><td class="off available" data-title="r0c2">28</td><td class="off available" data-title="r0c3">29</td><td class="off available" data-title="r0c4">30</td><td class="off available" data-title="r0c5">31</td><td class="weekend available" data-title="r0c6">1</td></tr><tr><td class="weekend available" data-title="r1c0">2</td><td class="available" data-title="r1c1">3</td><td class="available" data-title="r1c2">4</td><td class="available" data-title="r1c3">5</td><td class="available" data-title="r1c4">6</td><td class="available" data-title="r1c5">7</td><td class="weekend available" data-title="r1c6">8</td></tr><tr><td class="weekend available" data-title="r2c0">9</td><td class="available" data-title="r2c1">10</td><td class="available" data-title="r2c2">11</td><td class="available" data-title="r2c3">12</td><td class="available" data-title="r2c4">13</td><td class="available" data-title="r2c5">14</td><td class="weekend available" data-title="r2c6">15</td></tr><tr><td class="weekend available" data-title="r3c0">16</td><td class="available" data-title="r3c1">17</td><td class="available" data-title="r3c2">18</td><td class="available" data-title="r3c3">19</td><td class="available" data-title="r3c4">20</td><td class="available" data-title="r3c5">21</td><td class="weekend available" data-title="r3c6">22</td></tr><tr><td class="weekend available" data-title="r4c0">23</td><td class="available" data-title="r4c1">24</td><td class="available" data-title="r4c2">25</td><td class="available" data-title="r4c3">26</td><td class="available" data-title="r4c4">27</td><td class="available" data-title="r4c5">28</td><td class="weekend available" data-title="r4c6">29</td></tr><tr><td class="weekend available" data-title="r5c0">30</td><td class="off available" data-title="r5c1">1</td><td class="off available" data-title="r5c2">2</td><td class="off available" data-title="r5c3">3</td><td class="off available" data-title="r5c4">4</td><td class="off available" data-title="r5c5">5</td><td class="weekend off available" data-title="r5c6">6</td></tr></tbody></table></div><div class="calendar-time" style="display: none;"></div></div><div class="drp-buttons"><span class="drp-selected">08/09/2018 - 08/09/2018</span><button class="cancelBtn btn btn-sm btn-default" type="button">Cancel</button><button class="applyBtn btn btn-sm btn-primary" type="button">Apply</button> </div></div><div class="jvectormap-label"></div>
+<!-- end demo js-->
+<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+
+
+</body>
+</html>

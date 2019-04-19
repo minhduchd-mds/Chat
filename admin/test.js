@@ -1,55 +1,109 @@
-$(document).ready(function () {
-    var url = "https://www.youtube.com/watch?v=Zb2tvvMYD1U";
-    var dd = "https://player.vimeo.com/video/272297929";
-
-    var link4 ='';
-    var link1 ='';
-    var link2 ='';
-    var emojis=["https://www.youtube.com/embed/XCWfg_S4Bmc","https://player.vimeo.com/video/272297929"];
-
-    $.each(emojis, function(i){
-
-        switch (i) {
-
-            case '1':
-                i = emojis;
-                 link1 ='<iframe width="560" height="315" src=" '+ i+'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>\n';
-                break;
-            case '2':
-                 link2 ='<iframe width="560" height="315" src=" '+ emojis+'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>\n';
-                break;
-            case '3':
-               link4 ='<video width="400" height="225" controls  poster="http://www.webestools.com/page/media/videoTag/BigBuckBunny.png">\n' +
-                    '\t<source src=" '+i+' " type="video/mp4">\n' +
-                    '</video>';
-                break;
-
-            default:
-                break;
-
-        }
-        $("#link4").html(link4);
-
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+    /*function like dislike and report */
+    $("a.like,a.dis-like,a.report-user,.profile-details a.like,.profile-details a.dis-like").click(function(e){
+        e.preventDefault();
+        var Ajaxurl=$(this).attr('href');
+        $.ajax({
+            url:Ajaxurl,
+            success:function(response){
+                console.log(response);
+                //show there
+                $(".success_msg").css("display","block");
+                $(".success_msg").html(response);
+            },
+            beforeSend:function(){
+                $("#ajaxloader").show();
+            },
+            complete:function(){
+                $("#ajaxloader").hide();
+            }
+        });
+        $(this).parents('.userblock').fadeOut();
+        return false;
     });
-    var udsds ='';
-    var link3 = '';
-    var link5 = '';
-    for(i=0;i<emojis.length;i++){
 
-        if(emojis[i] == emojis[0]){
-             udsds  ='<a href="" onclick=x('+emojis[0]+')><iframe width="560"  height="315" src=" '+ emojis[i]+'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></a>';
 
-        }else if(emojis[i] == emojis[1]){
-            link3  ='<a href="" onclick=x('+emojis[1]+')><iframe src=" '+ emojis[i]+' " width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></a>';
 
-        }
-             link5 ='<video width="400" height="225" controls >\n' +
-            '\t<source src=" '+ emojis[i]+' " type="video/mp4">\n' +
-            '</video>';
 
-        }
-        $('#link').html(udsds);
-        $('#link1').html(link3);
-        $('#link5').html(link5);
+
+
+
+
+
+
+    // up file gallery
+    $(document).on("click", ".imgupload1", function() {
+        var a = $(this).attr("id");
+        $(".avatar-position").val(""),
+            $(".avatar-position").val(a),
+            $(".avatar-view").click()
+    }),
+        $(document).on("click", ".imgupload2", function() {
+            var a = $(this).attr("id");
+            $(".avatar-position").val(""),
+                $(".avatar-position").val(a),
+                $(".avatar-view2").click()
+        }),
+        $(document).on("click", ".imgupload3", function() {
+            var a = $(this).attr("id");
+            $(".avatar-position").val(""),
+                $(".avatar-position").val(a),
+                $(".avatar-view3").click()
+        }),
+        $(document).on("click", ".imgupload4", function() {
+            var a = $(this).attr("id");
+            $(".avatar-position").val(""),
+                $(".avatar-position").val(a),
+                $(".avatar-view4").click()
+        }),
+        $(document).on("click", ".imgupload5", function() {
+            var a = $(this).attr("id");
+            $(".avatar-position").val(""),
+                $(".avatar-position").val(a),
+                $(".avatar-view5").click()
+        }),
+        $(document).on("click", ".imgupload6", function() {
+            var a = $(this).attr("id");
+            $(".avatar-position").val(""),
+                $(".avatar-position").val(a),
+                $(".avatar-view6").click()
+        }),
+        $(document).on("click", ".remove-bg", function(a) {
+            a.stopPropagation();
+            var i = $(this).attr("data-position");
+            if ($(this).remove(),
+            "2" == i) {
+                var t = BASE_URL + "images/step/02.png";
+                $(".imgupload" + i).attr("src", +t)
+            }
+            if ("3" == i) {
+                t = BASE_URL + "images/step/03.png";
+                $(".imgupload" + i).attr("src", +t)
+            }
+            if ("4" == i) {
+                t = BASE_URL + "images/step/04.png";
+                $(".imgupload" + i).attr("src", +t)
+            }
+            if ("5" == i) {
+                t = BASE_URL + "images/step/05.png";
+                $(".imgupload" + i).attr("src", +t)
+            }
+            if ("6" == i) {
+                t = BASE_URL + "images/step/06.png";
+                $(".imgupload" + i).attr("src", +t)
+            }
+            $.ajax({
+                url: BASE_URL + "user/ajax_remove_gallery_image",
+                type: "POST",
+                data: {
+                    position: i
+                },
+                success: function(a) {
+                    var t = $.parseJSON(a);
+                    $(".imgupload" + i).attr("src", t.url)
+                }
+            })
+        });
 
 });

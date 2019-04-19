@@ -1,0 +1,58 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true
+  },
+  "exclude": [
+    {
+      "id": 1,
+      "image": "images/step/01.png",
+      "name" : "ha anh",
+      "conten" : "tim con sdfs dvcsvc df sfx ",
+      "satatus":1
+    },
+    {
+      "id": 2,
+      "image": "images/step/01.png",
+      "name" : "ha anh",
+      "conten" : "tim con sdfs dvcsvc df sfx ",
+      "satatus":1
+    },
+    {
+      "id": 3,
+      "image": "images/step/01.png",
+      "name" : "ha anh",
+      "conten" : "tim con sdfs dvcsvc df sfx ",
+      "satatus":2
+    },
+    {
+      "id": 4,
+      "image": "images/step/01.png",
+      "name" : "ha anh",
+      "conten" : "tim con sdfs dvcsvc df sfx ",
+      "satatus":2
+    },
+    {
+      "id": 5,
+      "image": "images/step/01.png",
+      "name" : "ha anh",
+      "conten" : "tim con sdfs dvcsvc df sfx ",
+      "satatus":1
+    },
+    {
+      "id": 6,
+      "image": "images/step/01.png",
+      "name" : "ha anh",
+      "conten" : "tim con sdfs dvcsvc df sfx ",
+      "satatus":1
+    },
+    {
+      "id": 7,
+      "image": "images/step/01.png",
+      "name" : "ha anh",
+      "conten" : "tim con sdfs dvcsvc df sfx ",
+      "satatus":1
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+.card-box {
+    padding: 20px;
+    border: 1px solid rgba(54,64,74,.08);
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    background-clip: padding-box;
+    margin-bottom: 20px;
+    background-color: #fff
+}
+.mails a {
+    color: #797979
+}
+
+.mails td {
+    vertical-align: middle!important;
+    position: relative
+}
+
+.mails td:last-of-type {
+    width: 100px;
+    padding-right: 20px
+}
+
+.mails tr:hover .text-white {
+    display: none
+}
+
+.mails .mail-select {
+    padding: 12px 20px;
+    min-width: 134px
+}
+
+.mails .checkbox {
+    margin-bottom: 0;
+    margin-top: 0;
+
+    display: inline-block;
+
+}
+
+.mails .checkbox label {
+    min-height: 16px
+}
+.mail-list .list-group-item {
+    background-color: transparent;
+    color: #2a3142;
+    font-size: .95rem;
+    border: none;
+}
+
+.mail-list .list-group-item:hover {
+    background-color: #eee
+}
+
+.mail-list .list-group-item:focus {
+    background-color: #eee
+}
+
+.mail-list .list-group-item.active {
+    color: #ef5350
+}
+
+.unread a {
+    font-weight: 600;
+    color: #444
+}
+
+.calendar {
+    float: left;
+    margin-bottom: 0
+}
+.p-0 {
+    padding: 0!important
+}
+
+.p-20 {
+    padding: 20px
+}
+
+.p-t-10 {
+    padding-top: 10px!important
+}
+
+.p-b-10 {
+    padding-bottom: 10px!important
+}
+
+.m-0 {
+    margin: 0!important
+}
+
+.m-r-5 {
+    margin-right: 5px
+}
+
+.m-r-10 {
+    margin-right: 10px
+}
+
+.m-r-15 {
+    margin-right: 15px!important
+}
+
+.m-l-5 {
+    margin-left: 5px
+}
+
+.m-l-10 {
+    margin-left: 10px
+}
+
+.m-l-15 {
+    margin-left: 15px
+}
+
+.m-t-5 {
+    margin-top: 5px!important
+}
+
+.m-t-10 {
+    margin-top: 10px!important
+}
+
+.m-t-15 {
+    margin-top: 15px!important
+}
+
+.m-t-20 {
+    margin-top: 20px!important
+}
+
+.m-t-30 {
+    margin-top: 30px!important
+}
+
+.m-t-40 {
+    margin-top: 40px!important
+}
+
+.m-t-50 {
+    margin-top: 50px
+}
+
+.m-b-5 {
+    margin-bottom: 5px
+}
+
+.m-b-10 {
+    margin-bottom: 10px
+}
+
+.m-b-15 {
+    margin-bottom: 15px
+}
+
+.m-b-20 {
+    margin-bottom: 20px
+}
+
+.m-b-25 {
+    margin-bottom: 25px
+}
+
+.m-b-30 {
+    margin-bottom: 30px!important
+}
+.w-md {
+    min-width: 110px
+}
+
+.w-lg {
+    min-width: 140px
+}
+
+.m-h-50 {
+    min-height: 50px
+}
+
+.l-h-34 {
+    line-height: 34px!important
+}
+
+.font-light {
+    font-weight: 300
+}
+
+.font-weight-medium {
+    font-weight: 500
+}
+
+.font-normal {
+    font-weight: 400
+}
+
+.font-bold {
+    font-weight: 700
+}
+
+.font-13 {
+    font-size: 13px
+}
+
+.font-14 {
+    font-size: 14px
+}
+
+.font-15 {
+    font-size: 15px
+}
+
+.font-16 {
+    font-size: 16px
+}
+
+.font-18 {
+    font-size: 18px
+}

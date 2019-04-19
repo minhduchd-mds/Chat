@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content=" gặp gỡ bạn bè, kết nối, bạn bè, giao tiếp, gặp gỡ trực tuyến, tin nhắn, tin nhắn, những sự kiện, những buổi hòa nhạc, ngày hôm nay, sự thông tin, chia sẻ ảnh, tìm bạn, cá nhân, online, mạng xã hội" />
+    <meta name="description" content="Matrimony là một trang hẹn hò trực tuyến, cung cấp các dịch vụ mai mối cho người độc thân. Tham gia ngay để tìm thấy người phù hợp lý tưởng ở xung quanh, đăng ký miễn phí!" />
+    <meta name="author" content="matrimony." />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Matrimony | Tham gia Matrimony giúp bạn tìm được người bạn đời tương lai.</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/logo.png" />
+
+    <!-- bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- mega menu -->
+    <link href="css/mega-menu/mega_menu.css" rel="stylesheet" type="text/css" />
+
+    <!-- font-awesome -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Flaticon -->
+    <link href="css/flaticon.css" rel="stylesheet" type="text/css" />
+
+    <!-- General style -->
+    <link href="css/general.css" rel="stylesheet" type="text/css" />
+
+    <!-- main style -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- Style customizer -->
+    <link rel="stylesheet" type="text/css" href="css/skins/skin-default.css" data-style="styles" />
+    <link rel="stylesheet" type="text/css" href="css/style-customizer.css" />
+    <link rel="" type="text/html" href="json/post.json">
+</head>
+
+<body>
+
+<!--=================================
+ preloader -->
+
+<div id="preloader">
+    <div class="clear-loading loading-effect"><img src="images/loading.gif" alt="" /></div>
+</div>
+<!--=================================
+header -->
+
+<header id="header" class="dark">
+    <!--Warning!-->
+    <div class="alert-warning-m">
+        <div class="alert alert-warning">
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">x</a>
+            <strong>Warning!</strong> Vui lòng xác thực tài khoản.
+            <a href="accuracy.html">Xác thực ngay</a>
+        </div>
+    </div>
+
+    <!--=================================
+   mega menu -->
+
+    <div class="menu">
+        <!-- menu start -->
+        <nav id="menu" class="mega-menu">
+            <!-- menu list items container -->
+            <section class="menu-list-items">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- menu logo -->
+                            <ul class="menu-logo">
+                                <li> <a href="index.html"><img src="images/logo.png" alt="logo" /> </a> </li>
+                            </ul>
+                            <!-- menu links -->
+                            <ul class="menu-links">
+                                <!-- active class -->
+                                <li class="hoverTrigger">
+                                    <a href="profile.html"> Hồ Sơ cá nhân
+                                        <i class="fa fa-angle-down fa-indicator"></i>
+                                        <div class="mobileTriggerButton"></div>
+                                    </a>
+                                    <!-- drop down multilevel  -->
+                                    <ul class="drop-down-multilevel left-menu effect-fade">
+                                        <li><a href="payment.html">Nâng cấp lên VIP</a></li>
+                                        <li><a href="payment.html">Vị trí của tôi</a></li>
+                                    </ul>
+                                </li>
+                                <li class="active"><a href="serach.html"> Tìm Kiếm </a></li>
+                                <li><a href="chat.html">Trò chuyện</a><span class="badge badge-light" id="Countchat"></span></li>
+                                <li><a href="math.html"> Math </a><span class="badge badge-light" id="count"></span></li>
+                                <li><a id="logout" class="btn"> Đăng xuất </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </nav>
+        <!-- menu end -->
+    </div>
+</header>
+
+<!--=================================
+ header -->
+
+<!--=================================
+ banner -->
+
+<!--<section class="inner-intro bg bg-fixed bg-overlay-black-60" style="background-image:url(images/bg/inner-bg-1.jpg);">-->
+    <!--<div class="container">-->
+        <!--<div class="row intro-title text-center">-->
+            <!--<div class="col-md-12">-->
+                <!--<div class="section-title">-->
+                    <!--<h1 class="position-relative divider">Tìm Kiếm</h1>-->
+                <!--</div>-->
+            <!--</div>-->
+
+        <!--</div>-->
+    <!--</div>-->
+<!--</section>-->
+
+<!--=================================
+ banner -->
+
+<!--=================================
+ Page Section -->
+<section class="faq-page page-section-ptb2">
+    <div class="container">
+        <div class="row justify-content-center mb-5 sm-mb-3">
+            <div class="col-md-8 text-center">
+                <h2 class="title divider mb-3">Tìm Kiếm</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-6">
+                <div class="sidebar-widget">
+                    <div class="widget-search"> <i class="fa fa-search"></i>
+                        <span  data-toggle="modal" data-target="#myModal"  class="form-control placeholder selected">
+                        <div class="white-text">
+                            Nữ, <span id="ageL">18</span> ~<span id="ageH">20</span>, <span id="areaStr">Việt Nam</span>,
+                            <span>120cm</span>~<span>181cm</span>
+                        </div>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Đặt bộ lọc tìm kiếm</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <form class="row" action="" method="POST">
+                                    <!--Do tuoi-->
+                                    <div class="col-md-3">
+                                        <label for="age" class="mr-sm-2">Độ tuổi</label>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="form-row">
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <select id="age" class="custom-select age_from">
+                                                        <option selected="" value="18" class="a">18</option>
+                                                        <option value="19" class="a">19</option>
+                                                        <option value="20" class="a">20</option>
+                                                        <option value="21" class="a">21</option>
+                                                        <option value="22" class="a">22</option>
+                                                        <option value="23" class="a">23</option>
+                                                        <option value="24" class="a">24</option>
+                                                        <option value="25" class="a">25</option>
+                                                        <option value="26" class="a">26</option>
+                                                        <option value="27" class="a">27</option>
+                                                        <option value="28" class="a">28</option>
+                                                        <option value="29" class="a">29</option>
+                                                        <option value="30" class="a">30</option>
+                                                        <option value="31" class="a">31</option>
+                                                        <option value="32" class="a">32</option>
+                                                        <option value="33" class="a">33</option>
+                                                        <option value="34" class="a">34</option>
+                                                        <option value="35" class="a">35</option>
+                                                        <option value="36" class="a">36</option>
+                                                        <option value="37" class="a">37</option>
+                                                        <option value="38" class="a">38</option>
+                                                        <option value="39" class="a">39</option>
+                                                        <option value="40" class="a">40</option>
+                                                        <option value="41" class="a">41</option>
+                                                        <option value="42" class="a">42</option>
+                                                        <option value="43" class="a">43</option>
+                                                        <option value="44" class="a">44</option>
+                                                        <option value="45" class="a">45</option>
+                                                        <option value="46" class="a">46</option>
+                                                        <option value="47" class="a">47</option>
+                                                        <option value="48" class="a">48</option>
+                                                        <option value="49" class="a">49</option>
+                                                        <option value="50" class="a">50</option>
+                                                        <option value="51" class="a">51</option>
+                                                        <option value="52" class="a">52</option>
+                                                        <option value="53" class="a">53</option>
+                                                        <option value="54" class="a">54</option>
+                                                        <option value="55" class="a">55</option>
+                                                        <option value="56" class="a">56</option>
+                                                        <option value="57" class="a">57</option>
+                                                        <option value="58" class="a">58</option>
+                                                        <option value="59" class="a">59</option>
+                                                        <option value="60" class="a">60</option>
+                                                        <option value="61" class="a">61</option>
+                                                        <option value="62" class="a">62</option>
+                                                        <option value="63" class="a">63</option>
+                                                        <option value="64" class="a">64</option>
+                                                        <option value="65" class="a">65</option>
+                                                        <option value="66" class="a">66</option>
+                                                        <option value="67" class="a">67</option>
+                                                        <option value="68" class="a">68</option>
+                                                        <option value="69" class="a">69</option>
+                                                        <option value="70" class="a">70</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label for="nextage" class="mr-sm-2">Đến</label>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <select id="nextage" class="custom-select age_to">
+                                                        <option selected="" value="18" class="a">18</option>
+                                                        <option value="19" class="a">19</option>
+                                                        <option value="20" class="a">20</option>
+                                                        <option value="21" class="a">21</option>
+                                                        <option value="22" class="a">22</option>
+                                                        <option value="23" class="a">23</option>
+                                                        <option value="24" class="a">24</option>
+                                                        <option value="25" class="a">25</option>
+                                                        <option value="26" class="a">26</option>
+                                                        <option value="27" class="a">27</option>
+                                                        <option value="28" class="a">28</option>
+                                                        <option value="29" class="a">29</option>
+                                                        <option value="30" class="a">30</option>
+                                                        <option value="31" class="a">31</option>
+                                                        <option value="32" class="a">32</option>
+                                                        <option value="33" class="a">33</option>
+                                                        <option value="34" class="a">34</option>
+                                                        <option value="35" class="a">35</option>
+                                                        <option value="36" class="a">36</option>
+                                                        <option value="37" class="a">37</option>
+                                                        <option value="38" class="a">38</option>
+                                                        <option value="39" class="a">39</option>
+                                                        <option value="40" class="a">40</option>
+                                                        <option value="41" class="a">41</option>
+                                                        <option value="42" class="a">42</option>
+                                                        <option value="43" class="a">43</option>
+                                                        <option value="44" class="a">44</option>
+                                                        <option value="45" class="a">45</option>
+                                                        <option value="46" class="a">46</option>
+                                                        <option value="47" class="a">47</option>
+                                                        <option value="48" class="a">48</option>
+                                                        <option value="49" class="a">49</option>
+                                                        <option value="50" class="a">50</option>
+                                                        <option value="51" class="a">51</option>
+                                                        <option value="52" class="a">52</option>
+                                                        <option value="53" class="a">53</option>
+                                                        <option value="54" class="a">54</option>
+                                                        <option value="55" class="a">55</option>
+                                                        <option value="56" class="a">56</option>
+                                                        <option value="57" class="a">57</option>
+                                                        <option value="58" class="a">58</option>
+                                                        <option value="59" class="a">59</option>
+                                                        <option value="60" class="a">60</option>
+                                                        <option value="61" class="a">61</option>
+                                                        <option value="62" class="a">62</option>
+                                                        <option value="63" class="a">63</option>
+                                                        <option value="64" class="a">64</option>
+                                                        <option value="65" class="a">65</option>
+                                                        <option value="66" class="a">66</option>
+                                                        <option value="67" class="a">67</option>
+                                                        <option value="68" class="a">68</option>
+                                                        <option value="69" class="a">69</option>
+                                                        <option value="70" class="a">70</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Khu vực-->
+                                    <div class="col-md-3">
+                                        <label for="countryId">Khu vực</label>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <select name="country" class="custom-select countries" id="countryId">
+                                                        <option value="Việt Nam">Việt Nam</option>
+                                                        <option value="Americas">Americas</option>
+                                                        <option value="Europe">Europe</option>
+                                                        <option value="Asia">Asia</option>
+                                                        <option value="Southeast Asia">Southeast Asia</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label for="stateId" class="mr-sm-2">Thành phố</label>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <select name="state" class="custom-select states" id="stateId">
+                                                        <option value="Hà Nội">Hà Nội</option>
+                                                        <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+                                                        <option value="Đà Nẵng">Đà Nẵng</option>
+                                                        <option value="Cà Mau">Cà Mau</option>
+                                                        <option value="Hải Phòng">Hải Phòng</option>
+                                                        <option value="Quảng Ninh">Quảng Ninh</option>
+                                                        <option value="Hải Dương">Hải Dương</option>
+                                                        <option value="Phú Thọ">Phú Thọ</option>
+                                                        <option value="Hà Nam">Hà Nam</option>
+                                                        <option value="Nam Định">Nam Định</option>
+                                                        <option value="Thái Bình">Thái Bình</option>
+                                                        <option value="Sơn La">Sơn La</option>
+                                                        <option value="Cao Bằng">Cao Bằng</option>
+                                                        <option value="Hoà Bình">Hoà Bình</option>
+                                                        <option value="Thanh Hoá">Thanh Hoá</option>
+                                                        <option value="Quảng Trị">Quảng Trị</option>
+                                                        <option value="Quảng Ngãi">Quảng Ngãi</option>
+                                                        <option value="Nghệ An">Nghệ An</option>
+                                                        <option value="Phan Thiết">Phan Thiết</option>
+                                                        <option value="Tây Ninh">Tây Ninh</option>
+                                                        <option value="Phú Quốc">Phú Quốc</option>
+                                                        <option value="Tây Nguyên">Tây Nguyên</option>
+                                                        <option value="Huế">Huế</option>
+                                                        <option value="Cần thơ">Cần thơ</option>
+                                                        <option value="Đà Lạt">Đà Lạt</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="cityId">Quận/Huyện </label>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <select name="city" class="custom-select cities" id="cityId">
+                                                        <option value="Cầu Giấy">Cầu Giấy</option>
+                                                        <option value="Mai Dịch">Mai Dịch</option>
+                                                        <option value="Ba Đình">Ba Đình</option>
+                                                        <option value="Bắc Từ Liêm">Bắc Từ Liêm</option>
+                                                        <option value="Nam Từ Liêm">Nam Từ Liêm</option>
+                                                        <option value="Hai Bà Trưng">Hai Ba Trưng</option>
+                                                        <option value="Tây Hồ">Tây Hồ </option>
+                                                        <option value="Đống Đa">Đống Đa</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Giới tính-->
+                                    <div class="col-md-3">
+                                        <label  class="mr-sm-2">Giới tính</label>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <select name="S_race[]" id="gender" class="custom-select">
+                                                        <option value="Nam">Nam</option>
+                                                        <option value="Nữ">Nữ</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Dân tộc-->
+                                    <!-- <div class="col-md-3">
+                                        <label for="race1" class="mr-sm-2">Dân tộc</label>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <select name="S_race[]" id="race1" class="custom-select">
+                                                        <option value="0">Chọn tất cả</option>
+                                                        <option value="2">Người phương Tây</option>
+                                                        <option value="4">Người gốc Tây Ban Nha / La tinh</option>
+                                                        <option value="8">Người gốc Phi</option>
+                                                        <option value="16">Người Châu Á / Thái Bình Dương</option>
+                                                        <option value="32">Đông Ấn Độ</option>
+                                                        <option value="64">Hoa kiều</option>
+                                                        <option value="128">Người Mỹ bản xứ</option>
+                                                        <option value="256">Người Ả Rập / Trung Đông</option>
+                                                        <option value="512">Tiếng Hàn</option>
+                                                        <option value="1024">người Nhật</option>
+                                                        <option value="2048">người Đài Loan</option>
+                                                        <option value="4096">Lai</option>
+                                                        <option value="8192">Khác</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+
+                                    <!--Ngôn ngữ-->
+                                    <!--<div class="col-md-3">-->
+                                        <!--<label for="language1" class="mr-sm-2">Ngôn ngữ</label>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-md-9">-->
+                                        <!--<div class="row">-->
+                                            <!--<div class="col-md-5">-->
+                                                <!--<div class="form-group">-->
+                                                    <!--<select name="S_language[]" id="language1" class="custom-select">-->
+                                                        <!--<option value="0">Chọn tất cả</option>-->
+                                                        <!--<option value="4">Tiếng Hoa</option>-->
+                                                        <!--<option value="16">Tiếng Anh</option>-->
+                                                        <!--<option value="32">Tiếng Pháp</option>-->
+                                                        <!--<option value="64">Tiếng Đức</option>-->
+                                                        <!--<option value="256">Indonesia</option>-->
+                                                        <!--<option value="512">Tiếng Ý</option>-->
+                                                        <!--<option value="1024">Tiếng Nhật</option>-->
+                                                        <!--<option value="2048">Hàn Quốc</option>-->
+                                                        <!--<option value="1048576">Malay</option>-->
+                                                        <!--<option value="32768">Tiếng Tây Ban Nha</option>-->
+                                                        <!--<option value="8192">Tiếng Bồ Đào Nha</option>-->
+                                                        <!--<option value="2097152">Thái</option>-->
+                                                        <!--<option value="16384">Tiếng Nga</option>-->
+                                                        <!--<option value="4194304">Albania</option>-->
+                                                        <!--<option value="2">Tiếng Ả Rập</option>-->
+                                                        <!--<option value="8388608">Bulgaria</option>-->
+                                                        <!--<option value="16777216">Miến Điện</option>-->
+                                                        <!--<option value="33554432">Croatia</option>-->
+                                                        <!--<option value="67108864">Séc</option>-->
+                                                        <!--<option value="134217728">Đan Mạch</option>-->
+                                                        <!--<option value="8">Tiếng Hà Lan</option>-->
+                                                        <!--<option value="268435456">Estonia</option>-->
+                                                        <!--<option value="536870912">Philippines</option>-->
+                                                        <!--<option value="1073741824">Phần Lan</option>-->
+                                                        <!--<option value="128">Tiếng Hebrew</option>-->
+                                                        <!--<option value="4294967296">Tiếng Hin-ddi</option>-->
+                                                        <!--<option value="8589934592">Hungary</option>-->
+                                                        <!--<option value="17179869184">Iceland</option>-->
+                                                        <!--<option value="34359738368">Kurd (Bắc Kurd)</option>-->
+                                                        <!--<option value="4096">Tiếng Na Uy</option>-->
+                                                        <!--<option value="68719476736">đánh bóng</option>-->
+                                                        <!--<option value="137438953472">Rumani</option>-->
+                                                        <!--<option value="65536">Tiếng Thụy Điển</option>-->
+                                                        <!--<option value="131072">Tiếng Tagalog</option>-->
+                                                        <!--<option value="274877906944">Thổ Nhĩ Kỳ</option>-->
+                                                        <!--<option value="549755813888">Ukraina</option>-->
+                                                        <!--<option value="262144">Tiếng Urdu</option>-->
+                                                        <!--<option value="VietNamese" selected="">tiếng Việt</option>-->
+                                                        <!--<option value="524288">Khác</option>-->
+                                                    <!--</select>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+
+                                    <!--Học vấn-->
+                                    <!-- <div class="col-md-3">
+                                        <label for="degree1" class="mr-sm-2">Học vấn</label>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <select name="S_degree[]" id="degree1" class="custom-select">
+                                                        <option value="0">Chọn tất cả</option>
+                                                        <option value="1">Dưới trung học cơ sở</option>
+                                                        <option value="2">Trung học cơ sở</option>
+                                                        <option value="3">Trường trung học phổ thông</option>
+                                                        <option value="7">trường dạy nghề</option>
+                                                        <option value="4">Trường đại học / cao đẳng</option>
+                                                        <option value="5">Thạc sĩ</option>
+                                                        <option value="6">Tiến sĩ</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+
+                                    <!--Chiều cao-->
+                                    <!--<div class="col-md-3">-->
+                                        <!--<label for="heightL" class="mr-sm-2">Chiều cao</label>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-md-9">-->
+                                        <!--<div class="row">-->
+                                            <!--<div class="col-md-5">-->
+                                                <!--<div class="form-group">-->
+                                                    <!--<select name="heightL" id="heightL" class="custom-select"><option value="120">120cm</option><option value="121">121cm</option><option value="122">122cm</option><option value="123">123cm</option><option value="124">124cm</option><option value="125">125cm</option><option value="126">126cm</option><option value="127">127cm</option><option value="128">128cm</option><option value="129">129cm</option><option value="130">130cm</option><option value="131">131cm</option><option value="132">132cm</option><option value="133">133cm</option><option value="134">134cm</option><option value="135">135cm</option><option value="136">136cm</option><option value="137">137cm</option><option value="138">138cm</option><option value="139">139cm</option><option value="140">140cm</option><option value="141">141cm</option><option value="142">142cm</option><option value="143">143cm</option><option value="144">144cm</option><option value="145">145cm</option><option value="146">146cm</option><option value="147">147cm</option><option value="148">148cm</option><option value="149">149cm</option><option value="150">150cm</option><option value="151">151cm</option><option value="152">152cm</option><option value="153">153cm</option><option value="154">154cm</option><option value="155">155cm</option><option value="156">156cm</option><option value="157">157cm</option><option value="158">158cm</option><option value="159">159cm</option><option value="160">160cm</option><option value="161">161cm</option><option value="162">162cm</option><option value="163">163cm</option><option value="164">164cm</option><option value="165">165cm</option><option value="166">166cm</option><option value="167">167cm</option><option value="168">168cm</option><option value="169">169cm</option><option value="170">170cm</option><option value="171">171cm</option><option value="172">172cm</option><option value="173">173cm</option><option value="174">174cm</option><option value="175">175cm</option><option value="176">176cm</option><option value="177">177cm</option><option value="178">178cm</option><option value="179">179cm</option><option value="180">180cm</option><option value="181">181cm</option><option value="182">182cm</option><option value="183">183cm</option><option value="184">184cm</option><option value="185">185cm</option><option value="186">186cm</option><option value="187">187cm</option><option value="188">188cm</option><option value="189">189cm</option><option value="190">190cm</option><option value="191">191cm</option><option value="192">192cm</option><option value="193">193cm</option><option value="194">194cm</option><option value="195">195cm</option><option value="196">196cm</option><option value="197">197cm</option><option value="198">198cm</option><option value="199">199cm</option><option value="200">200cm</option><option value="201">201cm</option><option value="202">202cm</option><option value="203">203cm</option><option value="204">204cm</option><option value="205">205cm</option><option value="206">206cm</option><option value="207">207cm</option><option value="208">208cm</option><option value="209">209cm</option><option value="210">210cm</option><option value="211">211cm</option><option value="212">212cm</option><option value="213">213cm</option><option value="214">214cm</option><option value="215">215cm</option><option value="216">216cm</option><option value="217">217cm</option><option value="218">218cm</option><option value="219">219cm</option><option value="220">220cm</option><option value="221">221cm</option><option value="222">222cm</option><option value="223">223cm</option><option value="224">224cm</option><option value="225">225cm</option><option value="226">226cm</option><option value="227">227cm</option><option value="228">228cm</option><option value="229">229cm</option></select>-->
+
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--&lt;!&ndash;Cân nặng&ndash;&gt;-->
+                                    <!--<div class="col-md-3">-->
+                                        <!--<label for="heightL" class="mr-sm-2">Cân nặng</label>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-md-9">-->
+                                        <!--<div class="row">-->
+                                            <!--<div class="col-md-5">-->
+                                                <!--<div class="form-group">-->
+                                                    <!--<select class="form-control text-dark" id="weightL" name="user_weight">-->
+                                                        <!--<option value="30">030</option>-->
+                                                        <!--<option value="31">031</option><option value="32">032</option>-->
+                                                        <!--<option value="33">033</option><option value="34">034</option>-->
+                                                        <!--<option value="35">035</option><option value="36">036</option>-->
+                                                        <!--<option value="37">037</option><option value="38">038</option>-->
+                                                        <!--<option value="39">039</option><option value="40">040</option>-->
+                                                        <!--<option value="41">041</option><option value="42">042</option>-->
+                                                        <!--<option value="43">043</option><option value="44">044</option>-->
+                                                        <!--<option value="45">045</option><option value="46">046</option>-->
+                                                        <!--<option value="47">047</option><option value="48">048</option>-->
+                                                        <!--<option value="49">049</option><option value="50">050</option>-->
+                                                        <!--<option value="51">051</option><option value="52">052</option>-->
+                                                        <!--<option value="53">053</option><option value="54">054</option>-->
+                                                        <!--<option value="55">055</option><option value="56">056</option>-->
+                                                        <!--<option value="57">057</option><option value="58">058</option>-->
+                                                        <!--<option value="59">059</option><option value="60">060</option>-->
+                                                        <!--<option value="61">061</option><option value="62">062</option>-->
+                                                        <!--<option value="63">063</option><option value="64">064</option>-->
+                                                        <!--<option value="65">065</option><option value="66">066</option>-->
+                                                        <!--<option value="67">067</option><option value="68">068</option>-->
+                                                        <!--<option value="69">069</option><option  value="70">070</option>-->
+                                                        <!--<option value="71">071</option><option value="72">072</option>-->
+                                                        <!--<option value="73">073</option><option value="74">074</option>-->
+                                                        <!--<option value="75">075</option><option value="76">076</option>-->
+                                                        <!--<option value="77">077</option><option value="78">078</option>-->
+                                                        <!--<option value="79">079</option><option value="80">080</option>-->
+                                                        <!--<option value="81">081</option><option value="82">082</option>-->
+                                                        <!--<option value="83">083</option><option value="84">084</option>-->
+                                                        <!--<option value="85">085</option><option value="86">086</option>-->
+                                                        <!--<option value="87">087</option><option value="88">088</option>-->
+                                                        <!--<option value="89">089</option><option value="90">090</option>-->
+                                                        <!--<option value="91">091</option><option value="92">092</option>-->
+                                                        <!--<option value="93">093</option><option value="94">094</option>-->
+                                                        <!--<option value="95">095</option><option value="96">096</option>-->
+                                                        <!--<option value="97">097</option><option value="98">098</option>-->
+                                                        <!--<option value="99">099</option><option value="100">100</option>-->
+                                                        <!--<option value="101">101</option><option value="102">102</option>-->
+                                                        <!--<option value="103">103</option><option value="104">104</option>-->
+                                                        <!--<option value="105">105</option><option value="106">106</option>-->
+                                                        <!--<option value="107">107</option><option value="108">108</option>-->
+                                                        <!--<option value="109">109</option><option value="110">110</option>-->
+                                                        <!--<option value="111">111</option><option value="112">112</option>-->
+                                                        <!--<option value="113">113</option><option value="114">114</option>-->
+                                                        <!--<option value="115">115</option><option value="116">116</option>-->
+                                                        <!--<option value="117">117</option><option value="118">118</option>-->
+                                                        <!--<option value="119">119</option><option value="120">120</option>-->
+                                                        <!--<option value="121">121</option><option value="122">122</option>-->
+                                                        <!--<option value="123">123</option><option value="124">124</option>-->
+                                                        <!--<option value="125">125</option><option value="126">126</option>-->
+                                                        <!--<option value="127">127</option><option value="128">128</option>-->
+                                                        <!--<option value="129">129</option><option value="130">130</option>-->
+                                                        <!--<option value="131">131</option><option value="132">132</option><option value="133">133</option>-->
+                                                        <!--<option value="134">134</option><option value="135">135</option>-->
+                                                        <!--<option value="136">136</option><option value="137">137</option>-->
+                                                        <!--<option value="138">138</option><option value="139">139</option>-->
+                                                        <!--<option value="140">140</option><option value="141">141</option>-->
+                                                        <!--<option value="142">142</option><option value="143">143</option>-->
+                                                        <!--<option value="144">144</option><option value="145">145</option>-->
+                                                        <!--<option value="146">146</option><option value="147">147</option>-->
+                                                        <!--<option value="148">148</option><option value="149">149</option>-->
+                                                        <!--<option value="150">150</option><option value="151">151</option>-->
+                                                        <!--<option value="152">152</option><option value="153">153</option>-->
+                                                        <!--<option value="154">154</option><option value="155">155</option>-->
+                                                        <!--<option value="156">156</option><option value="157">157</option>-->
+                                                        <!--<option value="158">158</option><option value="159">159</option>-->
+                                                        <!--<option value="160">160</option><option value="161">161</option>-->
+                                                        <!--<option value="162">162</option><option value="163">163</option>-->
+                                                        <!--<option value="164">164</option><option value="165">165</option>-->
+                                                        <!--<option value="166">166</option><option value="167">167</option>-->
+                                                        <!--<option value="168">168</option><option value="169">169</option>-->
+                                                        <!--<option value="170">170</option><option value="171">171</option>-->
+                                                        <!--<option value="172">172</option><option value="173">173</option>-->
+                                                        <!--<option value="174">174</option><option value="175">175</option>-->
+                                                        <!--<option value="176">176</option><option value="177">177</option>-->
+                                                        <!--<option value="178">178</option><option value="179">179</option>-->
+                                                        <!--<option value="180">180</option><option value="181">181</option>-->
+                                                        <!--<option value="182">182</option><option value="183">183</option>-->
+                                                        <!--<option value="184">184</option><option value="185">185</option>-->
+                                                        <!--<option value="186">186</option><option value="187">187</option>-->
+                                                        <!--<option value="188">188</option><option value="189">189</option>-->
+                                                        <!--<option value="190">190</option><option value="191">191</option>-->
+                                                        <!--<option value="192">192</option><option value="193">193</option>-->
+                                                        <!--<option value="194">194</option><option value="195">195</option>-->
+                                                        <!--<option value="196">196</option><option value="197">197</option>-->
+                                                        <!--<option value="198">198</option><option value="199">199</option>-->
+                                                        <!--<option value="200">200</option>-->
+                                                    <!--</select>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+
+                                    <!--Thân hình-->
+                                    <!-- <div class="col-md-3">
+                                        <label for="bodytype1" class="mr-sm-2">Thân hình</label>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <select name="S_bodytype[]" id="bodytype1" class="custom-select">
+                                                        <option value="0">Chọn tất cả</option>
+                                                        <option value="1">Mảnh mai</option>
+                                                        <option value="5">Lực lưỡng</option>
+                                                        <option value="2">Trung bình</option>
+                                                        <option value="3">Cân nặng</option>
+                                                        <option value="4">Yêu thương nhiều hơn</option>
+                                                        <option value="6">Cơ bắp</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+
+                                    <!--Tôn Giáo-->
+                                    <!-- <div class="col-md-3">
+                                        <label for="religion1" class="mr-sm-2">Tôn Giáo</label>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <select name="S_religion[]" id="religion1" class="custom-select">
+                                                        <option value="0">Chọn tất cả</option>
+                                                        <option value="1">Không</option>
+                                                        <option value="2">Phật giáo</option>
+                                                        <option value="3">Đạo giáo</option>
+                                                        <option value="4">Hồi giáo</option>
+                                                        <option value="5">Công giáo</option>
+                                                        <option value="6">Kitô giáo</option>
+                                                        <option value="8">Mặc Môn</option>
+                                                        <option value="9">Ấn Độ giáo</option>
+                                                        <option value="14">Sikh giáo</option>
+                                                        <option value="10">đạo Do thái</option>
+                                                        <option value="11">Bất khả tri</option>
+                                                        <option value="12">vô thần</option>
+                                                        <option value="13">Tâm linh</option>
+                                                        <option value="7">Khác</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+
+                                    <!--Lịch sử hôn nhân-->
+                                    <!-- <div class="col-md-3">
+                                        <label for="marriage1" class="mr-sm-2">Lịch sử hôn nhân</label>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <select name="S_marriage[]" id="marriage1" class="custom-select">
+                                                        <option value="0">Chọn tất cả</option>
+                                                        <option value="1">Độc thân (chưa kết hôn)</option>
+                                                        <option value="2">Độc thân (đã ly dị)</option>
+                                                        <option value="3">Độc thân (góa)</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+
+                                    <!--Bạn đã có con?-->
+                                    <!-- <div class="col-md-3">
+                                        <label for="kid1" class="mr-sm-2">Bạn đã có con?</label>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <select name="S_kid[]" id="kid1" class="custom-select">
+                                                        <option value="0">Chọn tất cả</option>
+                                                        <option value="3">KHÔNG</option>
+                                                        <option value="1">Có, Sống chung với nhau</option>
+                                                        <option value="2">Có, Sống riêng</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+
+                                    <!--Hút thuốc-->
+                                    <!-- <div class="col-md-3">
+                                        <label for="smoke1" class="mr-sm-2">Hút thuốc</label>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <select name="S_smoke[]" id="smoke1" class="custom-select">
+                                                        <option value="0">Chọn tất cả</option>
+                                                        <option value="1">KHÔNG</option>
+                                                        <option value="2">CÓ</option>
+                                                        <option value="3">Thỉnh thoảng</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+
+
+                                    <!--Uống-->
+                                    <!-- <div class="col-md-3">
+                                        <label for="drink1" class="mr-sm-2">Uống</label>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <select name="S_drink[]" id="drink1" class="custom-select">
+                                                        <option value="0">Chọn tất cả</option>
+                                                        <option value="1">KHÔNG</option>
+                                                        <option value="2">CÓ</option>
+                                                        <option value="3">Thỉnh thoảng</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+
+                                    <!--Đẳng cấp-->
+                                    <!-- <div class="col-md-3">
+                                        <label for="u905_input" class="mr-sm-2">Đẳng cấp</label>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <select id="u905_input" class="custom-select">
+                                                        <option value="Chọn tất cả" class="a">Chọn tất cả</option>
+                                                        <option value="Tầng thượng lưu" class="a">Tầng thượng lưu</option>
+                                                        <option value="Tầng trung lưu" class="a">Tầng trung lưu</option>
+                                                        <option value="Tầng bình dân" class="a">Tầng bình dân</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+
+                                </form>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <a id="search_user" class="button btn-sm btn-theme full-rounded animated right-icn" data-dismiss="modal"><span>Tìm Kiếm <i class="glyph-icon flaticon-hearts" aria-hidden="true"></i></span></a>
+<!--                                <button type="button" class="button btn-sm btn-theme full-rounded animated" data-dismiss="modal">Close</button>-->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="masonry-main page-section-pt grey-bg">
+    <div class="container">
+        <div class="row">
+            <!--left-->
+            <div class="col-sm-12 col-md-12 col-lg-12 col-md-12">
+                <div class="text-center">
+                    <h5 class="title divider-3 mt-3 mb-3">Đề xuất</h5>
+                </div>
+                <div class="masonry-block">
+                    <div class="masonry thumbMember row" id="thumbMember"></div>
+                </div>
+            </div>
+            <!--modal-->
+            <div class="modal fade" id="sentmessges">
+                <div class="modal-dialog modal-md">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Gửi tin nhắn</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <form method="post" class="text-center  mt-3">
+                                <div class="form-group">
+                                    <label for="title-message" class="title divider-3 text-black-im">Title</label>
+                                    <input class="form-control" type="text" maxlength="100" id="title-message" nam="title">
+                                </div>
+                                <div class="form-group">
+                                    <label for="conten-message" class="title divider-3 text-black-im">Message</label>
+                                    <textarea class="form-control" type="text" maxlength="100" id="conten-message" nam="title"></textarea>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <a id="sent-blog" class="button btn-sm btn-theme full-rounded animated right-icn"><span>Sent messages <i class="glyph-icon flaticon-hearts" aria-hidden="true"></i></span></a>
+                            <button type="button" class="button btn-sm btn-theme full-rounded animated" data-dismiss="modal">Close</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--right -->
+<!--            <div class="col-lg-3 col-md-12 col-sm-12 mt-3 white-bg">-->
+<!--                <div class="post-sidebar mt-3 mb-3">-->
+<!--                    <div class="sidebar-widget">-->
+<!--                        <h5 class="widget-title">Câu hỏi nhanh về quan điểm cá nhân</h5>-->
+<!--                       <div id="post-sent"></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+        </div>
+    </div>
+</section>
+<!--=================================
+ page-section -->
+
+<!--=================================
+footer -->
+
+
+<footer class=" text-white text-center" style="background: url(images/pattern/04.png) no-repeat 0 0; background-size: cover;">
+    <div class="footer-widget sm-mt-3">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="footer-logo mb-2"> <img class="img-center" src="images/footer-logo.png" alt="" /> </div>
+                    <div class="social-icons color-hover">
+                        <ul>
+                            <li class="social-facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li class="social-twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li class="social-dribbble"><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            <li class="social-gplus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li class="social-youtube"><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                    <p class="text-white">© 2018  - Matrimony Love  Tất Cả Các Quyền </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--=================================
+footer -->
+
+<!--=================================
+Color Customizer -->
+<div class="style-customizer closed">
+    <div class="buy-button"> <a class="opener" href="#"><i class="fa fa-cog fa-spin"></i></a> </div>
+    <div class="clearfix content-chooser">
+        <div class="section-title">
+            <h4 class="title">Lược đồ màu</h4>
+        </div>
+        <p>Màu chủ đề nào bạn muốn sử dụng? Dưới đây là một số màu được xác định trước.</p>
+        <ul class="styleChange clearfix">
+            <li class="skin-default selected" title="Default" data-style="skin-default" ></li>
+            <li class="skin-tomato" title="tomato" data-style="skin-tomato"></li>
+            <li class="skin-ruby" title="ruby" data-style="skin-ruby" ></li>
+            <li class="skin-pelorous" title="pelorous" data-style="skin-pelorous"></li>
+            <li class="skin-cranberry" title="cranberry" data-style="skin-cranberry"></li>
+            <li class="skin-golden-sand" title="golden-sand" data-style="skin-golden-sand"></li>
+            <li class="skin-deep-cerise" title="deep-cerise" data-style="skin-deep-cerise"></li>
+            <li class="skin-la-rioja" title="la-rioja" data-style="skin-la-rioja"></li>
+            <li class="skin-summer-sky" title="summer-sky" data-style="skin-summer-sky"></li>
+            <li class="skin-amaranth" title="amaranth" data-style="skin-amaranth"></li>
+            <li class="skin-light-tomato" title="light-tomato" data-style="skin-light-tomato"></li>
+            <li class="skin-pacific-blue" title="pacific-blue" data-style="skin-pacific-blue"></li>
+        </ul>
+        <ul class="resetAll clearfix">
+            <li><a class="button-reset button" href="#"><span>Đặt lại tất cả</span></a></li>
+        </ul>
+    </div>
+</div>
+<div id="back-to-top"><a class="top arrow" href="#top"><i class="fa fa-level-up"></i></a></div>
+
+<!--=================================
+ jquery -->
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/popper.min.js"></script>
+
+<!-- bootstrap -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-select.min.js"></script>
+
+<!-- appear -->
+<script type="text/javascript" src="js/jquery.appear.js"></script>
+
+<!-- Menu -->
+<script type="text/javascript" src="js/mega-menu/mega_menu.js"></script>
+
+<!-- style customizer  -->
+<script type="text/javascript" src="js/style-customizer.js"></script>
+
+<!-- custom -->
+<script type="text/javascript" src="js/custom.js"></script>
+<!-- custom -->
+<script type="text/javascript" src="js/api/custom.js"></script>
+</body>
+</html>

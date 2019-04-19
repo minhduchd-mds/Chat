@@ -1,0 +1,1092 @@
+// function profile() {
+    //     $.ajax({
+    //         url: d,
+    //         type: 'GET'
+    //     }).done(function(data) {
+    //         $('#profile-user').append('<ul class="clearfix">\n' +
+    //             '                                        <li id="nicknameShow" style="display: block;">\n' +
+    //             '                                            <a class="pen show" href="javascript:void(0);" onclick="edit(\'nickname\');" gtmname="My Profile EditNickname"></a>\n' +
+    //             '                                            <label>Nickname</label>\n' +
+    //             '                                            <div class="content">\n' +
+    //             '                                                <span>Minh Đức</span>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="nicknameEdit" class="bgColor clearfix" style="display: none;">\n' +
+    //             '                                            <div class="title">\n' +
+    //             '                                                <label>Nickname</label>\n' +
+    //             '                                            </div>\n' +
+    //             '                                            <div class="item">\n' +
+    //             '                                                <ul class="sort">\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <form id="nicknameFm"><input type="hidden" name="col" value="nickname_edit"><input type="text" name="nickname_edit" value="Minh Đức"></form>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-darkGreen" onclick="checkNickname();" gtmname="My Profile EditNickname Send">OK</a>\n' +
+    //             '                                                        <img src="https://d1qivmt25zv8j1.cloudfront.net/images/vi_VN/icon/loading.gif" height="22" style="display: none;">\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-lightGreen closeSearchOption" onclick="cancel(\'nickname\');" gtmname="My Profile EditNickname Cancel">Hủy</a>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                </ul>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="birthdayShow">\n' +
+    //             '                                            <a class="pen show" href="javascript:void(0);" onclick="edit(\'birthday\');" gtmname="My Profile EditBirthday"></a>\n' +
+    //             '                                            <label>Tuổi tác</label>\n' +
+    //             '                                            <div class="content">\n' +
+    //             '                                                <span>23</span>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="birthdayEdit" class="bgColor clearfix" style="display: none;">\n' +
+    //             '                                            <div class="title">\n' +
+    //             '                                                <label>Tuổi tác</label>\n' +
+    //             '                                            </div>\n' +
+    //             '                                            <div class="item">\n' +
+    //             '                                                <ul class="sort">\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <a href="javascript:void(0);" onclick="checkBirthday();" gtmname="My Profile EditRelationship Send" class="button buttonS button-rounded button-FB">Đồng bộ với Facebook</a>\n' +
+    //             '                                                        <img src="https://d1qivmt25zv8j1.cloudfront.net/images/vi_VN/icon/loading.gif" height="22">\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-lightGreen closeSearchOption" onclick="cancel(\'birthday\');" gtmname="My Profile EditBirthday Cancel">Hủy</a>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                </ul>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="zodiacShow">\n' +
+    //             '                                            <label>Chòm sao</label>\n' +
+    //             '                                            <div class="content"><span>Chòm sao Thiên Bình</span></div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="btShow">\n' +
+    //             '                                            <a class="pen show" href="javascript:void(0);" onclick="edit(\'bt\');" gtmname="My Profile EditBt"></a>\n' +
+    //             '                                            <label>Nhóm máu</label>\n' +
+    //             '                                            <div class="content">\n' +
+    //             '                                                <span>O</span>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="btEdit" class="bgColor clearfix" style="display: none;">\n' +
+    //             '                                            <div class="title">\n' +
+    //             '                                                <label>Nhóm máu</label>\n' +
+    //             '                                            </div>\n' +
+    //             '                                            <div class="item">\n' +
+    //             '                                                <ul class="sort">\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <div class="selectbox">\n' +
+    //             '                                                            <select name="blood_type">\n' +
+    //             '                                                                <option value="1">A</option>\n' +
+    //             '                                                                <option value="2">B</option>\n' +
+    //             '                                                                <option value="3" selected="">O</option>\n' +
+    //             '                                                                <option value="4">AB</option>\n' +
+    //             '                                                                <option value="5">Giữ lại</option>\n' +
+    //             '                                                            </select>\n' +
+    //             '                                                        </div>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-darkGreen" onclick="checkBt();" gtmname="My Profile EditBt Send">OK</a>\n' +
+    //             '                                                        <img src="https://d1qivmt25zv8j1.cloudfront.net/images/vi_VN/icon/loading.gif" height="22">\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-lightGreen closeSearchOption" onclick="cancel(\'bt\');" gtmname="My Profile EditBt Cancel">Hủy</a>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                </ul>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="locationShow">\n' +
+    //             '                                            <a class="pen show" href="javascript:void(0);" onclick="edit(\'location\');" gtmname="My Profile EditLocation"></a>\n' +
+    //             '                                            <label>Địa điểm</label>\n' +
+    //             '                                            <div class="content">\n' +
+    //             '                                                <span id="city">Thủ đô Hà Nội</span>, <span id="country">Việt Nam</span>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="locationEdit" class="bgColor clearfix" style="display: none;">\n' +
+    //             '                                            <div class="title">\n' +
+    //             '                                                <label>Địa điểm</label>\n' +
+    //             '                                            </div>\n' +
+    //             '                                            <div class="item">\n' +
+    //             '                                                <ul class="sort">\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <div class="selectbox">\n' +
+    //             '                                                            <select name="country">\n' +
+    //             '                                                                <option value="VN" selected="">Việt Nam</option>\n' +
+    //             '                                                                <option value="AS">American Samoa</option>\n' +
+    //             '                                                                <option value="AO">Angola</option>\n' +
+    //             '                                                                <option value="AI">Anguilla</option>\n' +
+    //             '                                                                <option value="AG">Antigua and Barbuda</option>\n' +
+    //             '                                                                <option value="MH">Aolepān Aorōkin M̧ajeļ</option>\n' +
+    //             '                                                                <option value="AR">Argentina</option>\n' +
+    //             '                                                                <option value="AU">Australia</option>\n' +
+    //             '                                                                <option value="AZ">Azərbaycan Respublikası</option>\n' +
+    //             '                                                                <option value="BB">Barbados</option>\n' +
+    //             '                                                                <option value="BE">Belgique</option>\n' +
+    //             '                                                                <option value="BZ">Belize</option>\n' +
+    //             '                                                                <option value="BM">Bermuda</option>\n' +
+    //             '                                                                <option value="BO">Bolivia&nbsp;</option>\n' +
+    //             '                                                                <option value="BW">Botswana</option>\n' +
+    //             '                                                                <option value="BR">Brasil</option>\n' +
+    //             '                                                                <option value="DE">Bundesrepublik Deutschland</option>\n' +
+    //             '                                                                <option value="CV">Cabo Verde</option>\n' +
+    //             '                                                                <option value="CA">Canada</option>\n' +
+    //             '                                                                <option value="KY">Cayman Islands</option>\n' +
+    //             '                                                                <option value="CL">Chile</option>\n' +
+    //             '                                                                <option value="CO">Colombia</option>\n' +
+    //             '                                                                <option value="CG">Congo</option>\n' +
+    //             '                                                                <option value="CK">Cook Islands</option>\n' +
+    //             '                                                                <option value="CR">Costa Rica</option>\n' +
+    //             '                                                                <option value="CU">Cuba</option>\n' +
+    //             '                                                                <option value="DK">Danmark</option>\n' +
+    //             '                                                                <option value="DM">Dominica</option>\n' +
+    //             '                                                                <option value="EC">Ecuador</option>\n' +
+    //             '                                                                <option value="EE">Eesti Vabariik</option>\n' +
+    //             '                                                                <option value="SV">El Salvador</option>\n' +
+    //             '                                                                <option value="ES">España</option>\n' +
+    //             '                                                                <option value="FJ">FIJI</option>\n' +
+    //             '                                                                <option value="FM">Federated States of Micronesia</option>\n' +
+    //             '                                                                <option value="FR">France</option>\n' +
+    //             '                                                                <option value="GA">Gabonaise</option>\n' +
+    //             '                                                                <option value="GH">Ghana</option>\n' +
+    //             '                                                                <option value="GD">Grenada</option>\n' +
+    //             '                                                                <option value="GU">Guam</option>\n' +
+    //             '                                                                <option value="GT">Guatemala</option>\n' +
+    //             '                                                                <option value="GW">Guiné-Bissau</option>\n' +
+    //             '                                                                <option value="GN">Guinée</option>\n' +
+    //             '                                                                <option value="GY">Guyana</option>\n' +
+    //             '                                                                <option value="GF">Guyane française</option>\n' +
+    //             '                                                                <option value="HN">Honduras</option>\n' +
+    //             '                                                                <option value="IN">India</option>\n' +
+    //             '                                                                <option value="ID">Indonesia</option>\n' +
+    //             '                                                                <option value="IR">Iran</option>\n' +
+    //             '                                                                <option value="IT">Italia</option>\n' +
+    //             '                                                                <option value="GL">Kalaallit Nunaat</option>\n' +
+    //             '                                                                <option value="KI">Kiribati</option>\n' +
+    //             '                                                                <option value="NO">Kongeriket Norge</option>\n' +
+    //             '                                                                <option value="SE">Konungariket Sverige</option>\n' +
+    //             '                                                                <option value="AX">Landskapet Åland</option>\n' +
+    //             '                                                                <option value="LI">Liechtenstein</option>\n' +
+    //             '                                                                <option value="LT">Lietuvos Respublika</option>\n' +
+    //             '                                                                <option value="LU">Lëtzebuerg</option>\n' +
+    //             '                                                                <option value="HU">Magyarország</option>\n' +
+    //             '                                                                <option value="MY">Malaysia</option>\n' +
+    //             '                                                                <option value="MT">Malta</option>\n' +
+    //             '                                                                <option value="MQ">Martinique</option>\n' +
+    //             '                                                                <option value="MU">Mauritius</option>\n' +
+    //             '                                                                <option value="YT">Mayotte</option>\n' +
+    //             '                                                                <option value="MC">Monaco</option>\n' +
+    //             '                                                                <option value="MM">Myanmar</option>\n' +
+    //             '                                                                <option value="MX">México</option>\n' +
+    //             '                                                                <option value="NA">Namibia</option>\n' +
+    //             '                                                                <option value="NL">Nederlands</option>\n' +
+    //             '                                                                <option value="BN">Negara Brunei Daruss</option>\n' +
+    //             '                                                                <option value="NZ">New Zealand</option>\n' +
+    //             '                                                                <option value="NI">Nicaragua</option>\n' +
+    //             '                                                                <option value="PK">Pakistan</option>\n' +
+    //             '                                                                <option value="PW">Palau</option>\n' +
+    //             '                                                                <option value="PA">Panamá</option>\n' +
+    //             '                                                                <option value="PY">Paraguay</option>\n' +
+    //             '                                                                <option value="PE">Perú</option>\n' +
+    //             '                                                                <option value="PH">Philippines</option>\n' +
+    //             '                                                                <option value="PL">Polska</option>\n' +
+    //             '                                                                <option value="PT">Portugal</option>\n' +
+    //             '                                                                <option value="AD">Principat d\'Andorra</option>\n' +
+    //             '                                                                <option value="PR">Puerto Rico</option>\n' +
+    //             '                                                                <option value="MD">Republica Moldova</option>\n' +
+    //             '                                                                <option value="HR">Republika Hrvatska</option>\n' +
+    //             '                                                                <option value="DO">República Dominicana</option>\n' +
+    //             '                                                                <option value="GQ">República de Guinea Ecuatorial</option>\n' +
+    //             '                                                                <option value="RO">România</option>\n' +
+    //             '                                                                <option value="CH">Schweiz</option>\n' +
+    //             '                                                                <option value="AL">Shqipërisë</option>\n' +
+    //             '                                                                <option value="SG">Singapore</option>\n' +
+    //             '                                                                <option value="ZA">South Africa</option>\n' +
+    //             '                                                                <option value="FI">Suomi</option>\n' +
+    //             '                                                                <option value="TR">Türkiye</option>\n' +
+    //             '                                                                <option value="GB">United Kingdom</option>\n' +
+    //             '                                                                <option value="US">United States</option>\n' +
+    //             '                                                                <option value="UY">Uruguay</option>\n' +
+    //             '                                                                <option value="VE">Venezuela</option>\n' +
+    //             '                                                                <option value="BS">the Bahamas</option>\n' +
+    //             '                                                                <option value="IE">Éire</option>\n' +
+    //             '                                                                <option value="IS">Ísland</option>\n' +
+    //             '                                                                <option value="AT">Österreich</option>\n' +
+    //             '                                                                <option value="CZ">Česká republika</option>\n' +
+    //             '                                                                <option value="GR">Ελλάδα</option>\n' +
+    //             '                                                                <option value="CY">Κυπριακή Δημοκρατία</option>\n' +
+    //             '                                                                <option value="BY">Беларусь</option>\n' +
+    //             '                                                                <option value="MN">Монгол улс</option>\n' +
+    //             '                                                                <option value="BG">Република България</option>\n' +
+    //             '                                                                <option value="MK">Република Македонија</option>\n' +
+    //             '                                                                <option value="RU">Росси́йская Федера́ция</option>\n' +
+    //             '                                                                <option value="UA">Україна</option>\n' +
+    //             '                                                                <option value="KZ">Қазақстан Республикасы</option>\n' +
+    //             '                                                                <option value="AM">Հայաստանի Հանրապետություն</option>\n' +
+    //             '                                                                <option value="IL">מדינת ישראל</option>\n' +
+    //             '                                                                <option value="AF">افغانستان</option>\n' +
+    //             '                                                                <option value="MR">الجمهورية الإسلامية الموريتانية‎</option>\n' +
+    //             '                                                                <option value="TN">الجمهورية التونسية‎</option>\n' +
+    //             '                                                                <option value="DZ">الجمهورية الجزائرية الديمقراطية الشعبية‎</option>\n' +
+    //             '                                                                <option value="IQ">الجمهورية العراقية</option>\n' +
+    //             '                                                                <option value="LB">الجمهوريّة اللبنانيّة‎</option>\n' +
+    //             '                                                                <option value="JO">المملكة الأردنّيّة الهاشميّة</option>\n' +
+    //             '                                                                <option value="MA">المملكة المغربية</option>\n' +
+    //             '                                                                <option value="EG">جمهوريّة مصرالعربيّة</option>\n' +
+    //             '                                                                <option value="AE">دولة الإمارات العربية المتحدة</option>\n' +
+    //             '                                                                <option value="QA">دولة قطر‎</option>\n' +
+    //             '                                                                <option value="LY">دولة ليبيا‎</option>\n' +
+    //             '                                                                <option value="BH">مملكة البحرين‎</option>\n' +
+    //             '                                                                <option value="BD">গণপ্রজাতন্ত্রী বাংলাদেশ</option>\n' +
+    //             '                                                                <option value="TH">ประเทศไทย</option>\n' +
+    //             '                                                                <option value="GE">საქართველო</option>\n' +
+    //             '                                                                <option value="KH">កម្ពុជា</option>\n' +
+    //             '                                                                <option value="CN">中华人民共和国</option>\n' +
+    //             '                                                                <option value="TW">台灣</option>\n' +
+    //             '                                                                <option value="JP">日本</option>\n' +
+    //             '                                                                <option value="MO">澳門</option>\n' +
+    //             '                                                                <option value="HK">香港</option>\n' +
+    //             '                                                                <option value="KR">대한민국</option>\n' +
+    //             '                                                                <option value="KP">조선민주주의인민공화국</option>\n' +
+    //             '                                                            </select>\n' +
+    //             '                                                        </div>\n' +
+    //             '                                                        <div class="selectbox">\n' +
+    //             '                                                            <select name="city"><option value="69002"> Bắc Giang</option><option value="69006"> Bà Rịa – Vũng Tàu</option><option value="69003"> Bắc Kạn</option><option value="69004"> Bạc Liêu</option><option value="69005"> Bắc Ninh</option><option value="69007"> Bến Tre</option><option value="69009"> Bình Dương</option><option value="69010"> Bình Phước</option><option value="69011"> Bình Thuận</option><option value="69008"> Bình Định</option><option value="69012"> Cà Mau</option><option value="69014"> Cao Bằng</option><option value="69021"> Gia Lai</option><option value="69022"> Hà Giang</option><option value="69027"> Hà Tĩnh</option><option value="69025"> Hà Nam</option><option value="69023"> Hải Dương</option><option value="69030"> Hậu Giang</option><option value="69028"> Hòa Bình</option><option value="69031"> Hưng Yên</option><option value="69032"> Khánh Hòa</option><option value="69033"> Kiên Giang</option><option value="69034"> Kon Tum</option><option value="69035"> Lai Châu</option><option value="69036"> Lâm Đồng</option><option value="69037"> Lạng Sơn</option><option value="69038"> Lào Cai</option><option value="69039"> Long An</option><option value="69040"> Nam Định</option><option value="69041"> Nghệ An</option><option value="69042"> Ninh Bình</option><option value="69043"> Ninh Thuận</option><option value="69044"> Phú Thọ</option><option value="69045"> Phú Yên</option><option value="69046"> Quảng Bình</option><option value="69047"> Quảng Nam</option><option value="69048"> Quảng Ngãi</option><option value="69049"> Quảng Ninh</option><option value="69050"> Quảng Trị</option><option value="69051"> Sóc Trăng</option><option value="69052"> Sơn La</option><option value="69053"> Tây Ninh</option><option value="69054"> Thái Bình</option><option value="69055"> Thái Nguyên</option><option value="69056"> Thanh Hóa</option><option value="69057"> Thừa Thiên – Huế</option><option value="69058"> Tiền Giang</option><option value="69059"> Trà Vinh</option><option value="69060"> Tuyên Quang</option><option value="69061"> Vĩnh Long</option><option value="69062"> Vĩnh Phúc</option><option value="69063"> Yên Bái</option><option value="69015"> Đắk Lắk</option><option value="69016"> Đắk Nông</option><option value="69018"> Điện Biên</option><option value="69019"> Đồng Nai</option><option value="69020"> Đồng Tháp</option><option value="69001">An Giang</option><option value="69013">Thành phố Cần Thơ</option><option value="69024">Thành phố Hải Phòng</option><option value="69029">Thành phố Hồ Chí Minh</option><option value="69017">Thành phố Đà Nẵng</option><option value="69026">Thủ đô Hà Nội</option></select>\n' +
+    //             '                                                        </div>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-darkGreen" onclick="checkLocation();" gtmname="My Profile EditLocation Send">OK</a>\n' +
+    //             '                                                        <img src="https://d1qivmt25zv8j1.cloudfront.net/images/vi_VN/icon/loading.gif" height="22">\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-lightGreen closeSearchOption" onclick="cancel(\'location\');" gtmname="My Profile EditLocation Cancel">Hủy</a>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                </ul>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="heightShow">\n' +
+    //             '                                            <a class="pen show" href="javascript:void(0);" onclick="edit(\'height\');" gtmname="My Profile EditHeight"></a>\n' +
+    //             '                                            <label>Chiều cao</label>\n' +
+    //             '                                            <div class="content">\n' +
+    //             '                                                <span>168cm</span>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="heightEdit" class="bgColor clearfix" style="display: none;">\n' +
+    //             '                                            <div class="title">\n' +
+    //             '                                                <label>Chiều cao</label>\n' +
+    //             '                                            </div>\n' +
+    //             '                                            <div class="item">\n' +
+    //             '                                                <ul class="sort">\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <div class="selectbox">\n' +
+    //             '                                                            <select name="height"><option value="120">120cm</option><option value="121">121cm</option><option value="122">122cm</option><option value="123">123cm</option><option value="124">124cm</option><option value="125">125cm</option><option value="126">126cm</option><option value="127">127cm</option><option value="128">128cm</option><option value="129">129cm</option><option value="130">130cm</option><option value="131">131cm</option><option value="132">132cm</option><option value="133">133cm</option><option value="134">134cm</option><option value="135">135cm</option><option value="136">136cm</option><option value="137">137cm</option><option value="138">138cm</option><option value="139">139cm</option><option value="140">140cm</option><option value="141">141cm</option><option value="142">142cm</option><option value="143">143cm</option><option value="144">144cm</option><option value="145">145cm</option><option value="146">146cm</option><option value="147">147cm</option><option value="148">148cm</option><option value="149">149cm</option><option value="150">150cm</option><option value="151">151cm</option><option value="152">152cm</option><option value="153">153cm</option><option value="154">154cm</option><option value="155">155cm</option><option value="156">156cm</option><option value="157">157cm</option><option value="158">158cm</option><option value="159">159cm</option><option value="160">160cm</option><option value="161">161cm</option><option value="162">162cm</option><option value="163">163cm</option><option value="164">164cm</option><option value="165">165cm</option><option value="166">166cm</option><option value="167">167cm</option><option value="168" selected="">168cm</option><option value="169">169cm</option><option value="170">170cm</option><option value="171">171cm</option><option value="172">172cm</option><option value="173">173cm</option><option value="174">174cm</option><option value="175">175cm</option><option value="176">176cm</option><option value="177">177cm</option><option value="178">178cm</option><option value="179">179cm</option><option value="180">180cm</option><option value="181">181cm</option><option value="182">182cm</option><option value="183">183cm</option><option value="184">184cm</option><option value="185">185cm</option><option value="186">186cm</option><option value="187">187cm</option><option value="188">188cm</option><option value="189">189cm</option><option value="190">190cm</option><option value="191">191cm</option><option value="192">192cm</option><option value="193">193cm</option><option value="194">194cm</option><option value="195">195cm</option><option value="196">196cm</option><option value="197">197cm</option><option value="198">198cm</option><option value="199">199cm</option><option value="200">200cm</option><option value="201">201cm</option><option value="202">202cm</option><option value="203">203cm</option><option value="204">204cm</option><option value="205">205cm</option><option value="206">206cm</option><option value="207">207cm</option><option value="208">208cm</option><option value="209">209cm</option><option value="210">210cm</option><option value="211">211cm</option><option value="212">212cm</option><option value="213">213cm</option><option value="214">214cm</option><option value="215">215cm</option><option value="216">216cm</option><option value="217">217cm</option><option value="218">218cm</option><option value="219">219cm</option><option value="220">220cm</option><option value="221">221cm</option><option value="222">222cm</option><option value="223">223cm</option><option value="224">224cm</option><option value="225">225cm</option><option value="226">226cm</option><option value="227">227cm</option><option value="228">228cm</option><option value="229">229cm</option></select>\n' +
+    //             '                                                        </div>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-darkGreen" onclick="checkHeight();" gtmname="My Profile EditHeight Send">OK</a>\n' +
+    //             '                                                        <img src="https://d1qivmt25zv8j1.cloudfront.net/images/vi_VN/icon/loading.gif" height="22">\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-lightGreen closeSearchOption" onclick="cancel(\'height\');" gtmname="My Profile EditHeight Cancel">Hủy</a>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                </ul>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="bodyShow">\n' +
+    //             '                                            <a class="pen show" href="javascript:void(0);" onclick="edit(\'body\');" gtmname="My Profile EditBody"></a>\n' +
+    //             '                                            <label>Thân hình</label>\n' +
+    //             '                                            <div class="content">\n' +
+    //             '                                                <span>Trung bình</span>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="bodyEdit" class="bgColor clearfix" style="display: none;">\n' +
+    //             '                                            <div class="title">\n' +
+    //             '                                                <label>Thân hình</label>\n' +
+    //             '                                            </div>\n' +
+    //             '                                            <div class="item">\n' +
+    //             '                                                <ul class="sort">\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <div class="selectbox">\n' +
+    //             '                                                            <select name="body_type">\n' +
+    //             '                                                                <option value="1">Mảnh mai</option>\n' +
+    //             '                                                                <option value="5">Lực lưỡng</option>\n' +
+    //             '                                                                <option value="2" selected="">Trung bình</option>\n' +
+    //             '                                                                <option value="3">Cân nặng</option>\n' +
+    //             '                                                                <option value="4">Yêu thương nhiều hơn</option>\n' +
+    //             '                                                                <option value="6">Cơ bắp</option>\n' +
+    //             '                                                            </select>\n' +
+    //             '                                                        </div>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-darkGreen" onclick="checkBody();" gtmname="My Profile EditBody Send">OK</a>\n' +
+    //             '                                                        <img src="https://d1qivmt25zv8j1.cloudfront.net/images/vi_VN/icon/loading.gif" height="22">\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-lightGreen closeSearchOption" onclick="cancel(\'body\');" gtmname="My Profile EditBody Cancel">Hủy</a>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                </ul>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="raceShow">\n' +
+    //             '                                            <a class="pen show" href="javascript:void(0);" onclick="edit(\'race\');" gtmname="My Profile EditRace"></a>\n' +
+    //             '                                            <label>Dân tộc</label>\n' +
+    //             '                                            <div class="content">\n' +
+    //             '                                                <span>Người Châu Á / Thái Bình Dương</span>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="raceEdit" class="bgColor clearfix" style="display: none;">\n' +
+    //             '                                            <div class="title">\n' +
+    //             '                                                <label>Dân tộc</label>\n' +
+    //             '                                            </div>\n' +
+    //             '                                            <div class="item">\n' +
+    //             '                                                <ul class="sort">\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <div class="selectbox">\n' +
+    //             '                                                            <select name="race">\n' +
+    //             '                                                                <option value="2">Người phương Tây</option>\n' +
+    //             '                                                                <option value="4">Người gốc Tây Ban Nha / La tinh</option>\n' +
+    //             '                                                                <option value="8">Người gốc Phi</option>\n' +
+    //             '                                                                <option value="16" selected="">Người Châu Á / Thái Bình Dương</option>\n' +
+    //             '                                                                <option value="32">Đông Ấn Độ</option>\n' +
+    //             '                                                                <option value="64">Hoa kiều</option>\n' +
+    //             '                                                                <option value="128">Người Mỹ bản xứ</option>\n' +
+    //             '                                                                <option value="256">Người Ả Rập / Trung Đông</option>\n' +
+    //             '                                                                <option value="512">Tiếng Hàn</option>\n' +
+    //             '                                                                <option value="1024">người Nhật</option>\n' +
+    //             '                                                                <option value="2048">người Đài Loan</option>\n' +
+    //             '                                                                <option value="4096">Lai</option>\n' +
+    //             '                                                                <option value="8192">Khác</option>\n' +
+    //             '                                                            </select>\n' +
+    //             '                                                        </div>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-darkGreen" onclick="checkRace();" gtmname="My Profile EditRace Send">OK</a>\n' +
+    //             '                                                        <img src="https://d1qivmt25zv8j1.cloudfront.net/images/vi_VN/icon/loading.gif" height="22">\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-lightGreen closeSearchOption" onclick="cancel(\'race\');" gtmname="My Profile EditRace Cancel">Hủy</a>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                </ul>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="professionShow">\n' +
+    //             '                                            <a class="pen show" href="javascript:void(0);" onclick="edit(\'profession\');" gtmname="My Profile EditProfession"></a>\n' +
+    //             '                                            <label>Nghề nghiệp</label>\n' +
+    //             '                                            <div class="content">\n' +
+    //             '                                                <span>ngành khách sạn – nhà hàng</span>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="professionEdit" class="bgColor clearfix" style="display: none;">\n' +
+    //             '                                            <div class="title">\n' +
+    //             '                                                <label>Nghề nghiệp</label>\n' +
+    //             '                                            </div>\n' +
+    //             '                                            <div class="item">\n' +
+    //             '                                                <ul class="sort">\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <div class="selectbox">\n' +
+    //             '                                                            <select name="profession">\n' +
+    //             '                                                                <option value="1">Sinh viên</option>\n' +
+    //             '                                                                <option value="2">Chính phủ và các dịch vụ dân sự</option>\n' +
+    //             '                                                                <option value="3">cảnh sát</option>\n' +
+    //             '                                                                <option value="28">quân đội</option>\n' +
+    //             '                                                                <option value="4">Nghiên cứu</option>\n' +
+    //             '                                                                <option value="29">giáo viên/giảng viên</option>\n' +
+    //             '                                                                <option value="5">đang bận</option>\n' +
+    //             '                                                                <option value="30">quản lý</option>\n' +
+    //             '                                                                <option value="31">tư vấn</option>\n' +
+    //             '                                                                <option value="32">chủ doanh nghiệp</option>\n' +
+    //             '                                                                <option value="33">Thương mại quốc tế</option>\n' +
+    //             '                                                                <option value="34">thương mại</option>\n' +
+    //             '                                                                <option value="7">môi giới tài chính</option>\n' +
+    //             '                                                                <option value="35">Tài chính quốc tế</option>\n' +
+    //             '                                                                <option value="36">đại lý bảo hiểm</option>\n' +
+    //             '                                                                <option value="37">kế toán</option>\n' +
+    //             '                                                                <option value="6">công nhân xây dựng</option>\n' +
+    //             '                                                                <option value="9">Bất động sản</option>\n' +
+    //             '                                                                <option value="8">Sản xuất và cung cấp</option>\n' +
+    //             '                                                                <option value="16">Bán lẻ</option>\n' +
+    //             '                                                                <option value="11" selected="">ngành khách sạn – nhà hàng</option>\n' +
+    //             '                                                                <option value="10">công nghệ</option>\n' +
+    //             '                                                                <option value="38">Internet</option>\n' +
+    //             '                                                                <option value="39">viễn thông</option>\n' +
+    //             '                                                                <option value="40">kỹ sư</option>\n' +
+    //             '                                                                <option value="41">thợ cơ khí</option>\n' +
+    //             '                                                                <option value="12">Nông nghiệp</option>\n' +
+    //             '                                                                <option value="13">Người nội trợ</option>\n' +
+    //             '                                                                <option value="42">giáo viên mầm non</option>\n' +
+    //             '                                                                <option value="43">chuyên viên chăm sóc sức khỏe tại nhà</option>\n' +
+    //             '                                                                <option value="14">bác sĩ</option>\n' +
+    //             '                                                                <option value="44">y tá</option>\n' +
+    //             '                                                                <option value="45">nhà thuốc</option>\n' +
+    //             '                                                                <option value="46">nha sĩ</option>\n' +
+    //             '                                                                <option value="47">thuốc</option>\n' +
+    //             '                                                                <option value="48">dinh dưỡng</option>\n' +
+    //             '                                                                <option value="49">đầu bếp</option>\n' +
+    //             '                                                                <option value="26">thẩm mỹ</option>\n' +
+    //             '                                                                <option value="50">thời trang</option>\n' +
+    //             '                                                                <option value="15">luật sư</option>\n' +
+    //             '                                                                <option value="17">ngành hậu cần (logistics)</option>\n' +
+    //             '                                                                <option value="18">lữ hành và du lịch</option>\n' +
+    //             '                                                                <option value="51">tiếp viên hàng không</option>\n' +
+    //             '                                                                <option value="52">vận tải</option>\n' +
+    //             '                                                                <option value="20">Xuất bản</option>\n' +
+    //             '                                                                <option value="21">truyền thông</option>\n' +
+    //             '                                                                <option value="22">Tiếp thị</option>\n' +
+    //             '                                                                <option value="53">quảng cáo</option>\n' +
+    //             '                                                                <option value="54">đài truyền hình</option>\n' +
+    //             '                                                                <option value="19">Giải trí</option>\n' +
+    //             '                                                                <option value="55">kinh doanh giải trí</option>\n' +
+    //             '                                                                <option value="56">dịch vụ tiệc cưới</option>\n' +
+    //             '                                                                <option value="57">tổ chức sự kiện</option>\n' +
+    //             '                                                                <option value="23">Nghệ thuật</option>\n' +
+    //             '                                                                <option value="58">nhà thiết kế</option>\n' +
+    //             '                                                                <option value="59">nhân viên văn phòng</option>\n' +
+    //             '                                                                <option value="60">vận động viên chuyên nghiệp</option>\n' +
+    //             '                                                                <option value="61">thư ký</option>\n' +
+    //             '                                                                <option value="62">trợ lý hành chính</option>\n' +
+    //             '                                                                <option value="63">nhân viên lễ tân</option>\n' +
+    //             '                                                                <option value="64">công việc tạm thời</option>\n' +
+    //             '                                                                <option value="27">hành nghề tự do</option>\n' +
+    //             '                                                                <option value="24">ngành nghề khác</option>\n' +
+    //             '                                                                <option value="25">thất nghiệp</option>\n' +
+    //             '                                                            </select>\n' +
+    //             '                                                        </div>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-darkGreen" onclick="checkProfession();" gtmname="My Profile EditProfession Send">OK</a>\n' +
+    //             '                                                        <img src="https://d1qivmt25zv8j1.cloudfront.net/images/vi_VN/icon/loading.gif" height="22">\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-lightGreen closeSearchOption" onclick="cancel(\'profession\');" gtmname="My Profile EditProfession Cancel">Hủy</a>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                </ul>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="jobShow">\n' +
+    //             '                                            <a class="pen show" href="javascript:void(0);" onclick="edit(\'job\');" gtmname="My Profile EditJob"></a>\n' +
+    //             '                                            <label>Chức danh</label>\n' +
+    //             '                                            <div class="content">\n' +
+    //             '                                                <span>Manager</span>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="jobEdit" class="bgColor clearfix" style="display: none;">\n' +
+    //             '                                            <div class="title"><label>Chức danh</label></div>\n' +
+    //             '                                            <div class="item">\n' +
+    //             '                                                <ul class="sort">\n' +
+    //             '                                                    <li> <input type="text" id="job_title" name="job_title" value="Manager"></li>\n' +
+    //             '                                                    <!--li>\n' +
+    //             '                                                        <input name="job" type="text" value="Manager" disabled />\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                    <li><a href="javascript:void(0);" onClick="checkJob();" gtmname="My Profile EditJob Send" class="button buttonS button-rounded button-FB">Đồng bộ với Facebook</a></li>\n' +
+    //             '                                                    <li><input id="jobStatus" type="checkbox" value="1" name="jobStatus"> <label id="lblJobStatus" for="jobStatus">Không hiển thị</label></li-->\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-darkGreen" onclick="checkJob();" gtmname="My Profile EditJob Send">OK</a>\n' +
+    //             '                                                        <img src="https://d1qivmt25zv8j1.cloudfront.net/images/vi_VN/icon/loading.gif" height="22">\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-lightGreen closeSearchOption" onclick="cancel(\'job\');" gtmname="My Profile EditJob Cancel">Hủy</a>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                </ul>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="degreeShow">\n' +
+    //             '                                            <a class="pen show" href="javascript:void(0);" onclick="edit(\'degree\');" gtmname="My Profile EditDegree"></a>\n' +
+    //             '                                            <label>Học vấn</label>\n' +
+    //             '                                            <div class="content">\n' +
+    //             '                                                <span>Trường đại học / cao đẳng</span>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="degreeEdit" class="bgColor clearfix" style="display: none;">\n' +
+    //             '                                            <div class="title">\n' +
+    //             '                                                <label>Học vấn</label>\n' +
+    //             '                                            </div>\n' +
+    //             '                                            <div class="item">\n' +
+    //             '                                                <ul class="sort">\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <div class="selectbox">\n' +
+    //             '                                                            <select name="degree">\n' +
+    //             '                                                                <option value="1">Dưới trung học cơ sở</option>\n' +
+    //             '                                                                <option value="2">Trung học cơ sở</option>\n' +
+    //             '                                                                <option value="3">Trường trung học phổ thông</option>\n' +
+    //             '                                                                <option value="7">trường dạy nghề</option>\n' +
+    //             '                                                                <option value="4" selected="">Trường đại học / cao đẳng</option>\n' +
+    //             '                                                                <option value="5">Thạc sĩ</option>\n' +
+    //             '                                                                <option value="6">Tiến sĩ</option>\n' +
+    //             '                                                            </select>\n' +
+    //             '                                                        </div>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-darkGreen" onclick="checkDegree();" gtmname="My Profile EditDegree Send">OK</a>\n' +
+    //             '                                                        <img src="https://d1qivmt25zv8j1.cloudfront.net/images/vi_VN/icon/loading.gif" height="22">\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-lightGreen closeSearchOption" onclick="cancel(\'degree\');" gtmname="My Profile EditDegree Cancel">Hủy</a>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                </ul>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="schoolnameShow">\n' +
+    //             '                                            <a class="pen show" href="javascript:void(0);" onclick="edit(\'schoolname\');" gtmname="My Profile EditSchool"></a>\n' +
+    //             '                                            <label>Trường học</label>\n' +
+    //             '                                            <div class="content">\n' +
+    //             '                                                <span>Hoa quả sạch Thanh Hà</span>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="schoolnameEdit" class="bgColor clearfix" style="display: none;">\n' +
+    //             '                                            <div class="title"><label>Trường học</label></div>\n' +
+    //             '                                            <div class="item">\n' +
+    //             '                                                <ul class="sort">\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <input name="schoolname" type="text" value="Hoa quả sạch Thanh Hà">\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                    <!--li><a href="javascript:void(0);" onClick="checkSchoolName();" gtmname="My Profile EditSchool Send" class="button buttonS button-rounded button-FB">Đồng bộ với Facebook</a></li>\n' +
+    //             '                                                    <li><input id="schoolnameStatus" type="checkbox" value="1" name="schoolnameStatus"> <label id="lblSchoolnameStatus" for="schoolnameStatus">Không hiển thị</label></li-->\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-darkGreen" onclick="checkSchoolname();" gtmname="My Profile EditSchool Send">OK</a>\n' +
+    //             '                                                        <img src="https://d1qivmt25zv8j1.cloudfront.net/images/vi_VN/icon/loading.gif" height="22">\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-lightGreen closeSearchOption" onclick="cancel(\'schoolname\');" gtmname="My Profile EditSchool Cancel">Hủy</a>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                </ul>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="marriageShow">\n' +
+    //             '                                            <a class="pen show" href="javascript:void(0);" onclick="edit(\'marriage\');" gtmname="My Profile EditMarriage"></a>\n' +
+    //             '                                            <label>Lịch sử hôn nhân</label>\n' +
+    //             '                                            <div class="content">\n' +
+    //             '                                                <span>Độc thân (chưa kết hôn)</span>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="marriageEdit" class="bgColor clearfix" style="display: none;">\n' +
+    //             '                                            <div class="title">\n' +
+    //             '                                                <label>Lịch sử hôn nhân</label>\n' +
+    //             '                                            </div>\n' +
+    //             '                                            <div class="item">\n' +
+    //             '                                                <ul class="sort">\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <div class="selectbox">\n' +
+    //             '                                                            <select name="marriage">\n' +
+    //             '                                                                <option value="1" selected="">Độc thân (chưa kết hôn)</option>\n' +
+    //             '                                                                <option value="2">Độc thân (đã ly dị)</option>\n' +
+    //             '                                                                <option value="3">Độc thân (góa)</option>\n' +
+    //             '                                                            </select>\n' +
+    //             '                                                        </div>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-darkGreen" onclick="checkMarriage();" gtmname="My Profile EditMarriage Send">OK</a>\n' +
+    //             '                                                        <img src="https://d1qivmt25zv8j1.cloudfront.net/images/vi_VN/icon/loading.gif" height="22">\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-lightGreen closeSearchOption" onclick="cancel(\'marriage\');" gtmname="My Profile EditMarriage Cancel">Hủy</a>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                </ul>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="attitudeShow">\n' +
+    //             '                                            <a class="pen show" href="javascript:void(0);" onclick="edit(\'attitude\');" gtmname="My Profile EditAttitude"></a>\n' +
+    //             '                                            <label>Nguyện vọng hôn nhân</label>\n' +
+    //             '                                            <div class="content">\n' +
+    //             '                                                <span>Nếu tôi tìm được đúng đối tượng, tôi sẽ kết hôn</span>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="attitudeEdit" class="bgColor clearfix" style="display: none;">\n' +
+    //             '                                            <div class="title">\n' +
+    //             '                                                <label>Nguyện vọng hôn nhân</label>\n' +
+    //             '                                            </div>\n' +
+    //             '                                            <div class="item">\n' +
+    //             '                                                <ul class="sort">\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <div class="selectbox">\n' +
+    //             '                                                            <select name="attitude">\n' +
+    //             '                                                                <option value="1">Tôi muốn kết hôn ngay</option>\n' +
+    //             '                                                                <option value="2">Tổ chức đám cưới trong 2-3 năm</option>\n' +
+    //             '                                                                <option value="3" selected="">Nếu tôi tìm được đúng đối tượng, tôi sẽ kết hôn</option>\n' +
+    //             '                                                                <option value="4">Hiện chưa có ý định kết hôn</option>\n' +
+    //             '                                                                <option value="5">Không biết</option>\n' +
+    //             '                                                            </select>\n' +
+    //             '                                                        </div>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-darkGreen" onclick="checkAttitude();" gtmname="My Profile EditAttitude Send">OK</a>\n' +
+    //             '                                                        <img src="https://d1qivmt25zv8j1.cloudfront.net/images/vi_VN/icon/loading.gif" height="22">\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-lightGreen closeSearchOption" onclick="cancel(\'attitude\');" gtmname="My Profile EditAttitude Cancel">Hủy</a>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                </ul>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="kidShow">\n' +
+    //             '                                            <a class="pen show" href="javascript:void(0);" onclick="edit(\'kid\');" gtmname="My Profile EditKid"></a>\n' +
+    //             '                                            <label>Bạn đã có con?</label>\n' +
+    //             '                                            <div class="content">\n' +
+    //             '                                                <span>Có, Sống chung với nhau</span>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="kidEdit" class="bgColor clearfix" style="display: none;">\n' +
+    //             '                                            <div class="title">\n' +
+    //             '                                                <label>Bạn đã có con?</label>\n' +
+    //             '                                                <input type="radio" id="kid_0" name="kid" value="0" onclick="$(\'select[name=\\\'kid_option\\\']\').val(0);">\n' +
+    //             '                                                <label for="kid_0">không ai</label>&nbsp;&nbsp;\n' +
+    //             '                                                <input type="radio" id="kid_1" name="kid" value="1" checked=""><label for="kid_1">Có</label>\n' +
+    //             '                                            </div>\n' +
+    //             '                                            <div class="item">\n' +
+    //             '                                                <ul class="sort">\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <div class="selectbox">\n' +
+    //             '                                                            <select name="kid_option">\n' +
+    //             '                                                                <option value="0">Chọn</option>\n' +
+    //             '                                                                <option value="1" selected="">Sống chung với nhau</option>\n' +
+    //             '                                                                <option value="2">Sống riêng</option>\n' +
+    //             '                                                            </select>\n' +
+    //             '                                                        </div>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-darkGreen" onclick="checkKid();" gtmname="My Profile EditKid Send">OK</a>\n' +
+    //             '                                                        <img src="https://d1qivmt25zv8j1.cloudfront.net/images/vi_VN/icon/loading.gif" height="22">\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-lightGreen closeSearchOption" onclick="cancel(\'kid\');" gtmname="My Profile EditKid Cancel">Hủy</a>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                </ul>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="briefShow">\n' +
+    //             '                                            <label class="title">Sở thích và giới thiệu</label>\n' +
+    //             '                                            <a class="pen show" href="javascript:void(0);" onclick="edit(\'brief\');" gtmname="My Profile EditBrief"></a><br>\n' +
+    //             '                                            <div id="briefStatus" class="check round6" style="display: none;">Bị từ chối</div>\n' +
+    //             '                                            <div>Xin chào, bạn thế nào rồi?Mình 22 tuổi. Cung hoàng đạo của mình là Con cua，Nghề nghiệp của mình có liên quan đếnSinh viên, Cô đơn quá lâu thật buồn tẻ,<br>\n' +
+    //             '                                                Mình muốn có bạn đồng hành để thêm màu sắc cho cuộc sống ~<br>\n' +
+    //             '                                                Mình hy vọng mình có thể gặp được đúng người ở đây.<br>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="briefEdit" class="bgColor clearfix" style="display: none;">\n' +
+    //             '                                            <div class="title">\n' +
+    //             '                                                <label>Sở thích và giới thiệu</label>\n' +
+    //             '                                            </div>\n' +
+    //             '                                            <div class="item">\n' +
+    //             '                                                <ul class="sort" style="text-align:center">\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <form id="briefFm"><input type="hidden" name="col" value="brief_edit"><textarea name="brief_edit" cols="65" rows="15">Xin chào, bạn thế nào rồi?Mình 22 tuổi. Cung hoàng đạo của mình là Con cua，Nghề nghiệp của mình có liên quan đếnSinh viên, Cô đơn quá lâu thật buồn tẻ,\n' +
+    //             'Mình muốn có bạn đồng hành để thêm màu sắc cho cuộc sống ~\n' +
+    //             'Mình hy vọng mình có thể gặp được đúng người ở đây.\n' +
+    //             '</textarea><span class="deepPink">Đừng để lại thông tin liên lạc, liên kết ngoài, quảng cáo, hoặc nội dung xúc phạm. Đừng đưa vào các ký hiệu chữ lặp đi lặp lại hoặc vô nghĩa. Chúng sẽ bị xóa nếu chúng không vượt qua được quá trình kiểm tra của chúng tôi</span></form>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-darkGreen" onclick="checkBrief();" gtmname="My Profile EditBrief Send">OK</a>\n' +
+    //             '                                                        <img src="https://d1qivmt25zv8j1.cloudfront.net/images/vi_VN/icon/loading.gif" height="22">\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-lightGreen closeSearchOption" onclick="cancel(\'brief\');" gtmname="My Profile EditBrief Cancel">Hủy</a>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                </ul>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="incomeShow">\n' +
+    //             '                                            <a class="pen show" href="javascript:void(0);" onclick="edit(\'income\');" gtmname="My Profile EditIncome"></a>\n' +
+    //             '                                            <label>Tiền lương</label>\n' +
+    //             '                                            <div class="content">\n' +
+    //             '                                                <span id="income">Giữ lại</span>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="incomeEdit" class="bgColor clearfix" style="display: none;">\n' +
+    //             '                                            <div class="title">\n' +
+    //             '                                                <label>Tiền lương</label>\n' +
+    //             '                                            </div>\n' +
+    //             '                                            <div class="item">\n' +
+    //             '                                                <ul class="sort">\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <div class="selectbox">\n' +
+    //             '                                                            <select name="income">\n' +
+    //             '                                                                <option value="1">&lt;₫20,000,000</option>\n' +
+    //             '                                                                <option value="2">₫20,000,000~30,000,000</option>\n' +
+    //             '                                                                <option value="3">₫30,000,000~40,000,000</option>\n' +
+    //             '                                                                <option value="4">₫40,000,000~50,000,000</option>\n' +
+    //             '                                                                <option value="5">₫50,000,000~60,000,000</option>\n' +
+    //             '                                                                <option value="6">₫60,000,000~120,000,000</option>\n' +
+    //             '                                                                <option value="7">₫120,000,000~300,000,000</option>\n' +
+    //             '                                                                <option value="8">₫300,000,000+</option>\n' +
+    //             '                                                                <option value="0" selected="selected">Giữ lại</option>\n' +
+    //             '                                                            </select>\n' +
+    //             '                                                        </div>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-darkGreen" onclick="checkIncome();" gtmname="My Profile EditIncome Send">OK</a>\n' +
+    //             '                                                        <img src="https://d1qivmt25zv8j1.cloudfront.net/images/vi_VN/icon/loading.gif" height="22">\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-lightGreen closeSearchOption" onclick="cancel(\'income\');" gtmname="My Profile EditIncome Cancel">Hủy</a>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                </ul>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="totalAssetShow">\n' +
+    //             '                                            <a class="pen show" href="javascript:void(0);" onclick="edit(\'totalAsset\');" gtmname="My Profile EditTotalAssets"></a>\n' +
+    //             '                                            <label>Tổng tài sản</label>\n' +
+    //             '                                            <div class="content">\n' +
+    //             '                                                <span id="totalAsset">₫5,500,000,000+</span>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="totalAssetEdit" class="bgColor clearfix" style="display: none;">\n' +
+    //             '                                            <div class="title"><label>Tổng tài sản</label></div>\n' +
+    //             '                                            <div class="item">\n' +
+    //             '                                                <ul class="sort">\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <div class="selectbox">\n' +
+    //             '                                                            <select name="totalAsset">\n' +
+    //             '                                                                <option value="1">&lt;₫200,000,000</option>\n' +
+    //             '                                                                <option value="2">₫200,000,000~550,000,000</option>\n' +
+    //             '                                                                <option value="3">₫550,000,000~900,000,000</option>\n' +
+    //             '                                                                <option value="4">₫900,000,000~1,800,000,000</option>\n' +
+    //             '                                                                <option value="5">₫1,800,000,000~3,600,000,000</option>\n' +
+    //             '                                                                <option value="6">₫3,600,000,000~5,500,000,000</option>\n' +
+    //             '                                                                <option value="7" selected="">₫5,500,000,000+</option>\n' +
+    //             '                                                                <option value="0">Giữ lại</option>\n' +
+    //             '                                                            </select>\n' +
+    //             '                                                        </div>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-darkGreen" onclick="checkTotalAsset();" gtmname="My Profile EditTotalAssets Send">OK</a>\n' +
+    //             '                                                        <img src="https://d1qivmt25zv8j1.cloudfront.net/images/vi_VN/icon/loading.gif" height="22">\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-lightGreen closeSearchOption" onclick="cancel(\'totalAsset\');" gtmname="My Profile EditTotalAssets Cancel">Hủy</a>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                </ul>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="personalityShow">\n' +
+    //             '                                            <a class="pen show" href="javascript:void(0);" onclick="edit(\'personality\');" gtmname="My Profile EditPersonality"></a>\n' +
+    //             '                                            <label>Tính cách</label>\n' +
+    //             '                                            <div class="content">\n' +
+    //             '                                                <span>Tự nhiên và dễ tính</span>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="personalityEdit" class="bgColor clearfix" style="display: none;">\n' +
+    //             '                                            <div class="title">\n' +
+    //             '                                                <label>Tính cách</label>\n' +
+    //             '                                            </div>\n' +
+    //             '                                            <div class="item">\n' +
+    //             '                                                <ul class="sort">\n' +
+    //             '                                                    <li style="border:none">\n' +
+    //             '                                                        <form id="personalityFm">\n' +
+    //             '                                                            <input type="hidden" name="col" value="personality">\n' +
+    //             '                                                            <ul class="personality clearfix">\n' +
+    //             '                                                                <li><input id="chkPersonality_1" type="checkbox" name="personality[]" value="1"><label for="chkPersonality_1">Bình thường</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_2" type="checkbox" name="personality[]" value="2"><label for="chkPersonality_2">Ấm áp</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_4" type="checkbox" name="personality[]" value="4"><label for="chkPersonality_4">Hướng về công việc</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_8" type="checkbox" name="personality[]" value="8"><label for="chkPersonality_8">Tao nhã</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_16" type="checkbox" name="personality[]" value="16"><label for="chkPersonality_16">Vui tính</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_32" type="checkbox" name="personality[]" value="32"><label for="chkPersonality_32">Trưởng thành muộn</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_64" type="checkbox" name="personality[]" value="64"><label for="chkPersonality_64">Thú vị</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_128" type="checkbox" name="personality[]" value="128"><label for="chkPersonality_128">Hướng về gia đình</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_256" type="checkbox" name="personality[]" value="256"><label for="chkPersonality_256">Hạnh phúc và hay cười</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_512" type="checkbox" name="personality[]" value="512"><label for="chkPersonality_512">Dễ gần</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_1024" type="checkbox" name="personality[]" value="1024"><label for="chkPersonality_1024">Tính toán cá nhân</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_2048" type="checkbox" name="personality[]" value="2048"><label for="chkPersonality_2048">Cứng đầu</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_4096" type="checkbox" name="personality[]" value="4096"><label for="chkPersonality_4096">Hiếu kỳ</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_8192" type="checkbox" name="personality[]" value="8192"><label for="chkPersonality_8192">E thẹn</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_16384" type="checkbox" name="personality[]" value="16384"><label for="chkPersonality_16384">Điềm tĩnh</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_32768" type="checkbox" name="personality[]" value="32768"><label for="chkPersonality_32768">Vui tính</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_65536" type="checkbox" name="personality[]" value="65536"><label for="chkPersonality_65536">Đúng đắn và chừng mực</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_131072" type="checkbox" name="personality[]" value="131072"><label for="chkPersonality_131072">Bình tĩnh</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_262144" type="checkbox" name="personality[]" value="262144"><label for="chkPersonality_262144">Lạc quan</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_524288" type="checkbox" name="personality[]" value="524288"><label for="chkPersonality_524288">Kiên quyết</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_1048576" type="checkbox" name="personality[]" value="1048576" checked=""><label for="chkPersonality_1048576">Tự nhiên và dễ tính</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_2097152" type="checkbox" name="personality[]" value="2097152"><label for="chkPersonality_2097152">Thực tế và  thích hành động</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_4194304" type="checkbox" name="personality[]" value="4194304"><label for="chkPersonality_4194304">Kỹ năng xã hội tốt</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_8388608" type="checkbox" name="personality[]" value="8388608"><label for="chkPersonality_8388608">Tuân thủ quy tắc</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_16777216" type="checkbox" name="personality[]" value="16777216"><label for="chkPersonality_16777216">Ngay thẳng</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_33554432" type="checkbox" name="personality[]" value="33554432"><label for="chkPersonality_33554432">Hào phóng</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_67108864" type="checkbox" name="personality[]" value="67108864"><label for="chkPersonality_67108864">Sẵn sàng lên đường</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_134217728" type="checkbox" name="personality[]" value="134217728"><label for="chkPersonality_134217728">Nhạy cảm với cô đơn</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_268435456" type="checkbox" name="personality[]" value="268435456"><label for="chkPersonality_268435456">Thành thật</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_536870912" type="checkbox" name="personality[]" value="536870912"><label for="chkPersonality_536870912">Dịu dàng</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_1073741824" type="checkbox" name="personality[]" value="1073741824"><label for="chkPersonality_1073741824">Khoan dung</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_2147483648" type="checkbox" name="personality[]" value="2147483648"><label for="chkPersonality_2147483648">Một người biết lắng nghe</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_4294967296" type="checkbox" name="personality[]" value="4294967296"><label for="chkPersonality_4294967296">Chu đáo</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_8589934592" type="checkbox" name="personality[]" value="8589934592"><label for="chkPersonality_8589934592">Khôn ngoan</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_17179869184" type="checkbox" name="personality[]" value="17179869184"><label for="chkPersonality_17179869184">Dám nghĩ dám làm</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_34359738368" type="checkbox" name="personality[]" value="34359738368"><label for="chkPersonality_34359738368">Có tài hùng biện</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_68719476736" type="checkbox" name="personality[]" value="68719476736"><label for="chkPersonality_68719476736">Khắt khe</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_137438953472" type="checkbox" name="personality[]" value="137438953472"><label for="chkPersonality_137438953472">Nghiêm chỉnh</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_274877906944" type="checkbox" name="personality[]" value="274877906944"><label for="chkPersonality_274877906944">Tận tụy</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_549755813888" type="checkbox" name="personality[]" value="549755813888"><label for="chkPersonality_549755813888">Sẵn sàng chăm sóc mọi người</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_1099511627776" type="checkbox" name="personality[]" value="1099511627776"><label for="chkPersonality_1099511627776">Khiêm tốn</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_2199023255552" type="checkbox" name="personality[]" value="2199023255552"><label for="chkPersonality_2199023255552">Thích sống ngoài trời</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_4398046511104" type="checkbox" name="personality[]" value="4398046511104"><label for="chkPersonality_4398046511104">Thông minh nhưng thận trọng</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_8796093022208" type="checkbox" name="personality[]" value="8796093022208"><label for="chkPersonality_8796093022208">Có trách nhiệm</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_17592186044416" type="checkbox" name="personality[]" value="17592186044416"><label for="chkPersonality_17592186044416">Bình tĩnh</label></li>\n' +
+    //             '                                                                <li><input id="chkPersonality_35184372088832" type="checkbox" name="personality[]" value="35184372088832"><label for="chkPersonality_35184372088832">Nam/nữ Otaku</label></li>\n' +
+    //             '                                                            </ul>\n' +
+    //             '                                                        </form>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                    <li style="text-align:center">\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-darkGreen" onclick="checkPersonality();" gtmname="My Profile EditPersonality Send">OK</a>\n' +
+    //             '                                                        <img src="https://d1qivmt25zv8j1.cloudfront.net/images/vi_VN/icon/loading.gif" height="22">\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-lightGreen closeSearchOption" onclick="cancel(\'personality\');" gtmname="My Profile EditPersonality Cancel">Hủy</a>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                </ul>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="languageShow">\n' +
+    //             '                                            <a class="pen show" href="javascript:void(0);" onclick="edit(\'language\');" gtmname="My Profile Editlanguage"></a>\n' +
+    //             '                                            <label>Ngôn ngữ</label>\n' +
+    //             '                                            <div class="content">\n' +
+    //             '                                                <span>Tiếng Hoa, tiếng Việt</span>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="languageEdit" class="bgColor clearfix" style="display: none;">\n' +
+    //             '                                            <div class="title">\n' +
+    //             '                                                <label>Ngôn ngữ</label>\n' +
+    //             '                                            </div>\n' +
+    //             '                                            <div class="item">\n' +
+    //             '                                                <ul class="sort">\n' +
+    //             '                                                    <li style="border:none">\n' +
+    //             '                                                        <form id="languageFm">\n' +
+    //             '                                                            <input type="hidden" name="col" value="language">\n' +
+    //             '                                                            <ul class="personality clearfix">\n' +
+    //             '                                                                <li><input id="chkLanguage_4" type="checkbox" name="language[]" value="4" checked=""><label for="chkLanguage_4">Tiếng Hoa</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_16" type="checkbox" name="language[]" value="16"><label for="chkLanguage_16">Tiếng Anh</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_32" type="checkbox" name="language[]" value="32"><label for="chkLanguage_32">Tiếng Pháp</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_64" type="checkbox" name="language[]" value="64"><label for="chkLanguage_64">Tiếng Đức</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_256" type="checkbox" name="language[]" value="256"><label for="chkLanguage_256">Indonesia</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_512" type="checkbox" name="language[]" value="512"><label for="chkLanguage_512">Tiếng Ý</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_1024" type="checkbox" name="language[]" value="1024"><label for="chkLanguage_1024">Tiếng Nhật</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_2048" type="checkbox" name="language[]" value="2048"><label for="chkLanguage_2048">Hàn Quốc</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_1048576" type="checkbox" name="language[]" value="1048576"><label for="chkLanguage_1048576">Malay</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_32768" type="checkbox" name="language[]" value="32768"><label for="chkLanguage_32768">Tiếng Tây Ban Nha</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_8192" type="checkbox" name="language[]" value="8192"><label for="chkLanguage_8192">Tiếng Bồ Đào Nha</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_2097152" type="checkbox" name="language[]" value="2097152"><label for="chkLanguage_2097152">Thái</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_16384" type="checkbox" name="language[]" value="16384"><label for="chkLanguage_16384">Tiếng Nga</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_4194304" type="checkbox" name="language[]" value="4194304"><label for="chkLanguage_4194304">Albania</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_2" type="checkbox" name="language[]" value="2"><label for="chkLanguage_2">Tiếng Ả Rập</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_8388608" type="checkbox" name="language[]" value="8388608"><label for="chkLanguage_8388608">Bulgaria</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_16777216" type="checkbox" name="language[]" value="16777216"><label for="chkLanguage_16777216">Miến Điện</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_33554432" type="checkbox" name="language[]" value="33554432"><label for="chkLanguage_33554432">Croatia</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_67108864" type="checkbox" name="language[]" value="67108864"><label for="chkLanguage_67108864">Séc</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_134217728" type="checkbox" name="language[]" value="134217728"><label for="chkLanguage_134217728">Đan Mạch</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_8" type="checkbox" name="language[]" value="8"><label for="chkLanguage_8">Tiếng Hà Lan</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_268435456" type="checkbox" name="language[]" value="268435456"><label for="chkLanguage_268435456">Estonia</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_536870912" type="checkbox" name="language[]" value="536870912"><label for="chkLanguage_536870912">Philippines</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_1073741824" type="checkbox" name="language[]" value="1073741824"><label for="chkLanguage_1073741824">Phần Lan</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_128" type="checkbox" name="language[]" value="128"><label for="chkLanguage_128">Tiếng Hebrew</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_4294967296" type="checkbox" name="language[]" value="4294967296"><label for="chkLanguage_4294967296">Tiếng Hin-ddi</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_8589934592" type="checkbox" name="language[]" value="8589934592"><label for="chkLanguage_8589934592">Hungary</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_17179869184" type="checkbox" name="language[]" value="17179869184"><label for="chkLanguage_17179869184">Iceland</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_34359738368" type="checkbox" name="language[]" value="34359738368"><label for="chkLanguage_34359738368">Kurd (Bắc Kurd)</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_4096" type="checkbox" name="language[]" value="4096"><label for="chkLanguage_4096">Tiếng Na Uy</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_68719476736" type="checkbox" name="language[]" value="68719476736"><label for="chkLanguage_68719476736">đánh bóng</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_137438953472" type="checkbox" name="language[]" value="137438953472"><label for="chkLanguage_137438953472">Rumani</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_65536" type="checkbox" name="language[]" value="65536"><label for="chkLanguage_65536">Tiếng Thụy Điển</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_131072" type="checkbox" name="language[]" value="131072"><label for="chkLanguage_131072">Tiếng Tagalog</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_274877906944" type="checkbox" name="language[]" value="274877906944"><label for="chkLanguage_274877906944">Thổ Nhĩ Kỳ</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_549755813888" type="checkbox" name="language[]" value="549755813888"><label for="chkLanguage_549755813888">Ukraina</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_262144" type="checkbox" name="language[]" value="262144"><label for="chkLanguage_262144">Tiếng Urdu</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_2147483648" type="checkbox" name="language[]" value="2147483648" checked=""><label for="chkLanguage_2147483648">tiếng Việt</label></li>\n' +
+    //             '                                                                <li><input id="chkLanguage_524288" type="checkbox" name="language[]" value="524288"><label for="chkLanguage_524288">Khác</label></li>\n' +
+    //             '                                                            </ul>\n' +
+    //             '                                                        </form>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                    <li style="text-align:center">\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-darkGreen" onclick="checklanguage();" gtmname="My Profile Editlanguage Send">OK</a>\n' +
+    //             '                                                        <img src="https://d1qivmt25zv8j1.cloudfront.net/images/vi_VN/icon/loading.gif" height="22">\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-lightGreen closeSearchOption" onclick="cancel(\'language\');" gtmname="My Profile Editlanguage Cancel">Hủy</a>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                </ul>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="socialShow">\n' +
+    //             '                                            <a class="pen show" href="javascript:void(0);" onclick="edit(\'social\');" gtmname="My Profile EditSocial"></a>\n' +
+    //             '                                            <label>Đời sống xã hội</label>\n' +
+    //             '                                            <div class="content">\n' +
+    //             '                                                <span>Tôi muốn gặp gỡ nhóm nhiều người</span>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="socialEdit" class="bgColor clearfix" style="display: none;">\n' +
+    //             '                                            <div class="title">\n' +
+    //             '                                                <label>Đời sống xã hội</label>\n' +
+    //             '                                            </div>\n' +
+    //             '                                            <div class="item">\n' +
+    //             '                                                <ul class="sort">\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <div class="selectbox">\n' +
+    //             '                                                            <select name="social">\n' +
+    //             '                                                                <option value="1" selected="">Tôi muốn gặp gỡ nhóm nhiều người</option>\n' +
+    //             '                                                                <option value="2">Tôi làm quen mọi người rất nhanh chóng</option>\n' +
+    //             '                                                                <option value="3">Tôi muốn gặp gỡ ít người</option>\n' +
+    //             '                                                                <option value="4">Tôi phải mất một thời gian để làm quen với người ta</option>\n' +
+    //             '                                                                <option value="5">Thích sống một mình </option>\n' +
+    //             '                                                            </select>\n' +
+    //             '                                                        </div>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-darkGreen" onclick="checkSocial();" gtmname="My Profile EditSocial Send">OK</a>\n' +
+    //             '                                                        <img src="https://d1qivmt25zv8j1.cloudfront.net/images/vi_VN/icon/loading.gif" height="22">\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-lightGreen closeSearchOption" onclick="cancel(\'social\');" gtmname="My Profile EditSocial Cancel">Hủy</a>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                </ul>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="livingShow">\n' +
+    //             '                                            <a class="pen show" href="javascript:void(0);" onclick="edit(\'living\');" gtmname="My Profile EditLiving"></a>\n' +
+    //             '                                            <label>Bạn sống với ai?</label>\n' +
+    //             '                                            <div class="content">\n' +
+    //             '                                                <span>Sống một mình</span>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="livingEdit" class="bgColor clearfix" style="display: none;">\n' +
+    //             '                                            <div class="title">\n' +
+    //             '                                                <label>Bạn sống với ai?</label>\n' +
+    //             '                                            </div>\n' +
+    //             '                                            <div class="item">\n' +
+    //             '                                                <ul class="sort">\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <div class="selectbox">\n' +
+    //             '                                                            <select name="living">\n' +
+    //             '                                                                <option value="1" selected="">Sống một mình</option>\n' +
+    //             '                                                                <option value="2">Sống với gia đình</option>\n' +
+    //             '                                                                <option value="3">Sống chung với bạn bè</option>\n' +
+    //             '                                                                <option value="4">Sống chung với thú cưng</option>\n' +
+    //             '                                                                <option value="5">Khác</option>\n' +
+    //             '                                                            </select>\n' +
+    //             '                                                        </div>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-darkGreen" onclick="checkLiving();" gtmname="My Profile EditLiving Send">OK</a>\n' +
+    //             '                                                        <img src="https://d1qivmt25zv8j1.cloudfront.net/images/vi_VN/icon/loading.gif" height="22">\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-lightGreen closeSearchOption" onclick="cancel(\'living\');" gtmname="My Profile EditLiving Cancel">Hủy</a>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                </ul>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="smokeShow">\n' +
+    //             '                                            <a class="pen show" href="javascript:void(0);" onclick="edit(\'smoke\');" gtmname="My Profile EditSmoke"></a>\n' +
+    //             '                                            <label>Hút thuốc</label>\n' +
+    //             '                                            <div class="content">\n' +
+    //             '                                                <span>KHÔNG</span>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="smokeEdit" class="bgColor clearfix" style="display: none;">\n' +
+    //             '                                            <div class="title">\n' +
+    //             '                                                <label>Hút thuốc</label>\n' +
+    //             '                                            </div>\n' +
+    //             '                                            <div class="item">\n' +
+    //             '                                                <ul class="sort">\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <div class="selectbox">\n' +
+    //             '                                                            <select name="smoke">\n' +
+    //             '                                                                <option value="1" selected="">KHÔNG</option>\n' +
+    //             '                                                                <option value="2">CÓ</option>\n' +
+    //             '                                                                <option value="3">Thỉnh thoảng</option>\n' +
+    //             '                                                            </select>\n' +
+    //             '                                                        </div>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-darkGreen" onclick="checkSmoke();" gtmname="My Profile EditSmoke Send">OK</a>\n' +
+    //             '                                                        <img src="https://d1qivmt25zv8j1.cloudfront.net/images/vi_VN/icon/loading.gif" height="22">\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-lightGreen closeSearchOption" onclick="cancel(\'smoke\');" gtmname="My Profile EditSmoke Cancel">Hủy</a>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                </ul>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="drinkShow">\n' +
+    //             '                                            <a class="pen show" href="javascript:void(0);" onclick="edit(\'drink\');" gtmname="My Profile EditDrink"></a>\n' +
+    //             '                                            <label>Uống</label>\n' +
+    //             '                                            <div class="content">\n' +
+    //             '                                                <span>Thỉnh thoảng</span>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="drinkEdit" class="bgColor clearfix" style="display: none;">\n' +
+    //             '                                            <div class="title">\n' +
+    //             '                                                <label>Uống</label>\n' +
+    //             '                                            </div>\n' +
+    //             '                                            <div class="item">\n' +
+    //             '                                                <ul class="sort">\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <div class="selectbox">\n' +
+    //             '                                                            <select name="drink">\n' +
+    //             '                                                                <option value="1">KHÔNG</option>\n' +
+    //             '                                                                <option value="2">CÓ</option>\n' +
+    //             '                                                                <option value="3" selected="">Thỉnh thoảng</option>\n' +
+    //             '                                                            </select>\n' +
+    //             '                                                        </div>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-darkGreen" onclick="checkDrink();" gtmname="My Profile EditDrink Send">OK</a>\n' +
+    //             '                                                        <img src="https://d1qivmt25zv8j1.cloudfront.net/images/vi_VN/icon/loading.gif" height="22">\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-lightGreen closeSearchOption" onclick="cancel(\'drink\');" gtmname="My Profile EditDrink Cancel">Hủy</a>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                </ul>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="religionShow">\n' +
+    //             '                                            <a class="pen show" href="javascript:void(0);" onclick="edit(\'religion\');" gtmname="My Profile EditReligion"></a>\n' +
+    //             '                                            <label>Tôn Giáo</label>\n' +
+    //             '                                            <div class="content">\n' +
+    //             '                                                <span>Không</span>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="religionEdit" class="bgColor clearfix" style="display: none;">\n' +
+    //             '                                            <div class="title">\n' +
+    //             '                                                <label>Tôn Giáo</label>\n' +
+    //             '                                            </div>\n' +
+    //             '                                            <div class="item">\n' +
+    //             '                                                <ul class="sort">\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <div class="selectbox">\n' +
+    //             '                                                            <select name="religion">\n' +
+    //             '                                                                <option value="1" selected="">Không</option>\n' +
+    //             '                                                                <option value="2">Phật giáo</option>\n' +
+    //             '                                                                <option value="3">Đạo giáo</option>\n' +
+    //             '                                                                <option value="4">Hồi giáo</option>\n' +
+    //             '                                                                <option value="5">Công giáo</option>\n' +
+    //             '                                                                <option value="6">Kitô giáo</option>\n' +
+    //             '                                                                <option value="8">Mặc Môn</option>\n' +
+    //             '                                                                <option value="9">Ấn Độ giáo</option>\n' +
+    //             '                                                                <option value="14">Sikh giáo</option>\n' +
+    //             '                                                                <option value="10">đạo Do thái</option>\n' +
+    //             '                                                                <option value="11">Bất khả tri</option>\n' +
+    //             '                                                                <option value="12">vô thần</option>\n' +
+    //             '                                                                <option value="13">Tâm linh</option>\n' +
+    //             '                                                                <option value="7">Khác</option>\n' +
+    //             '                                                            </select>\n' +
+    //             '                                                        </div>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-darkGreen" onclick="checkReligion();" gtmname="My Profile EditReligion Send">OK</a>\n' +
+    //             '                                                        <img src="https://d1qivmt25zv8j1.cloudfront.net/images/vi_VN/icon/loading.gif" height="22">\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-lightGreen closeSearchOption" onclick="cancel(\'religion\');" gtmname="My Profile EditReligion Cancel">Hủy</a>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                </ul>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="childShow">\n' +
+    //             '                                            <a class="pen show" href="javascript:void(0);" onclick="edit(\'child\');" gtmname="My Profile EditChild"></a>\n' +
+    //             '                                            <label>Bạn muốn có con không?</label>\n' +
+    //             '                                            <div class="content">\n' +
+    //             '                                                <span>CÓ</span>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="childEdit" class="bgColor clearfix" style="display: none;">\n' +
+    //             '                                            <div class="title">\n' +
+    //             '                                                <label>Bạn muốn có con không?</label>\n' +
+    //             '                                            </div>\n' +
+    //             '                                            <div class="item">\n' +
+    //             '                                                <ul class="sort">\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <div class="selectbox">\n' +
+    //             '                                                            <select name="child">\n' +
+    //             '                                                                <option value="1">KHÔNG</option>\n' +
+    //             '                                                                <option value="2" selected="">CÓ</option>\n' +
+    //             '                                                                <option value="3">Không biết</option>\n' +
+    //             '                                                            </select>\n' +
+    //             '                                                        </div>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-darkGreen" onclick="checkChild();" gtmname="My Profile EditChild Send">OK</a>\n' +
+    //             '                                                        <img src="https://d1qivmt25zv8j1.cloudfront.net/images/vi_VN/icon/loading.gif" height="22">\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-lightGreen closeSearchOption" onclick="cancel(\'child\');" gtmname="My Profile EditChild Cancel">Hủy</a>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                </ul>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="hkShow">\n' +
+    //             '                                            <a class="pen show" href="javascript:void(0);" onclick="edit(\'hk\');" gtmname="My Profile EditHK"></a>\n' +
+    //             '                                            <label>Công việc nhà</label>\n' +
+    //             '                                            <div class="content">\n' +
+    //             '                                                <span>Tôi sẽ làm điều đó khi tôi có thời gian rảnh</span>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                        <li id="hkEdit" class="bgColor clearfix" style="display: none;">\n' +
+    //             '                                            <div class="title">\n' +
+    //             '                                                <label>Công việc nhà</label>\n' +
+    //             '                                            </div>\n' +
+    //             '                                            <div class="item">\n' +
+    //             '                                                <ul class="sort">\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <div class="selectbox">\n' +
+    //             '                                                            <select name="hk">\n' +
+    //             '                                                                <option value="1">Hoạt động</option>\n' +
+    //             '                                                                <option value="2" selected="">Tôi sẽ làm điều đó khi tôi có thời gian rảnh</option>\n' +
+    //             '                                                                <option value="3">Nếu có thể, tôi hy vọng phía bên kia sẽ làm điều đó</option>\n' +
+    //             '                                                                <option value="4">Chúng tôi hy vọng phía bên khác sẽ làm điều đó</option>\n' +
+    //             '                                                            </select>\n' +
+    //             '                                                        </div>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                    <li>\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-darkGreen" onclick="checkHk();" gtmname="My Profile EditHK Send">OK</a>\n' +
+    //             '                                                        <img src="https://d1qivmt25zv8j1.cloudfront.net/images/vi_VN/icon/loading.gif" height="22">\n' +
+    //             '                                                        <a href="javascript:void(0);" class="button buttonS button-rounded button-lightGreen closeSearchOption" onclick="cancel(\'hk\');" gtmname="My Profile EditHK Cancel">Hủy</a>\n' +
+    //             '                                                    </li>\n' +
+    //             '                                                </ul>\n' +
+    //             '                                            </div>\n' +
+    //             '                                        </li>\n' +
+    //             '                                    </ul>');
+    //
+    //
+    //     })
+    //
+    // }

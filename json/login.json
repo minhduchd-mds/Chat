@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true
+  },
+  "exclude": [
+    {
+      "id": "1",
+      "email" : "admin@gmail.com",
+      "password" : "admin1234"
+
+    }
+  ]
+}
