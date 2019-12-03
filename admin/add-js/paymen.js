@@ -4,6 +4,17 @@ $(document).ready(function () {
     if(id){
         creatAcc();
         loginAcc();
+        $('#logout').on('click', function (e) {
+            e.preventDefault();
+            $('#logout').remove();
+            localStorage.removeItem('secretToken');
+            localStorage.removeItem('fullname');
+            localStorage.removeItem('ism');
+            localStorage.removeItem('month');
+            localStorage.removeItem('halfYear');
+            localStorage.removeItem('year');
+            window.location.href = "login.html";
+        });
     }else {
         localStorage.removeItem('secretToken');
         localStorage.removeItem('fullname');
@@ -91,8 +102,8 @@ $(document).ready(function () {
                        '                                                <td class="cut-text-hidden">' + price + ' đ</td>\n' +
                        '                                                <td class="cut-text-hidden">' + pricer + 'đ</td>\n' +
                        '                                                <td class="cut-text-hidden">' + total_momeny + 'đ</td>\n' +
-                       '                                                <td class="cut-text-hidden">' + data.amount + 'like</td>\n' +
-                       '                                                <td class="cut-text-hidden">' + data.boost + '</td>\n' +
+                       '                                                <td class="cut-text-hidden"><span class="badge badge-primary">' + data.amount + '</span></td>\n' +
+                       '                                                <td class="cut-text-hidden"><span class="badge badge-primary">' + data.boost + '</span></td>\n' +
                        '                                                <td class="cut-text-hidden">' + data.product_name +'</td>\n' +
                        '                                                <td class="table-action">\n' +
                        '                                                    <a href="" id="delete" data-id="'+id+'" class="action-icon"> <i class="mdi mdi-delete"></i></a>\n' +

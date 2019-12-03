@@ -12,14 +12,14 @@ $(document).ready(function () {
         var password = $('#passLogin').val();
         if(email.length === 0){
             isValidEmail = false;
-            $('.error-msgs').text('Nhap email');
+            $('.error-msgs').text('Nhập email').css('color','#ff0000');
         }else {
             isValidEmail = true;
             $('.error-msgs').remove();
         }
         if(password.length === 0){
             isValidPassword = false;
-            $('.error-msg').text('Nhap password');
+            $('.error-msg').text('Nhập password').css('color','#ff0000');
         }else {
             isValidPassword = true;
             $('.error-msg').remove();
@@ -58,14 +58,14 @@ $(document).ready(function () {
         var password = $('#password').val();
         if(email.length === 0){
             isValidEmail = false;
-            $('.error-msgs').text('Nhap email');
+            $('.error-msgs').text('Nhập email').css('color','#ff0000');
         }else {
             isValidEmail = true;
             $('.error-msgs').remove();
         }
         if(password.length === 0){
             isValidPassword = false;
-            $('.error-msg').text('Nhap password');
+            $('.error-msg').text('Nhập password').css('color','#ff0000');
         }else {
             isValidPassword = true;
             $('.error-msg').remove();
@@ -82,7 +82,8 @@ $(document).ready(function () {
                     data: JSON.stringify(data),
                     // contentType: "application/json; charset=utf-8",
                     success: function (res) {
-                        window.location.href = 'login.html';
+                        window.location.href = 'profile.html';
+                        localStorage.setItem('email', email);
                     },
                     error: function () {
                         alert('Error')
@@ -103,7 +104,7 @@ $(document).ready(function () {
         var emailPhones = $('#emailPhone').val();
         if(emailPhones.length === 0){
             EmailPhone  = false;
-            $('.error').text('Nhập email hoặc phone');
+            $('.error').text('Nhập email hoặc phone').css('color','#ff0000');
         }else {
             EmailPhone = true;
             $('.error').remove();

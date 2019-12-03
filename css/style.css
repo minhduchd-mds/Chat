@@ -50,6 +50,12 @@ Design and Developed by: potenzaglobalsolutions.com
 #preloader{background:#343434 !important; bottom:0; height:100%; left:0; overflow:hidden !important;  position:fixed; right:0; top:0; width:100%; z-index:99999; text-align:center;}
 .clear-loading { text-align: center;  position: absolute; top: 50%; left: 50%; margin-left: -152px; -webkit-box-sizing: border-box;-moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; display:inline-block;  text-align:center; transform: translateY(-50%); -webkit-transform: translateY(-50%); -o-transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%);}
 
+
+#love-loading{
+    background:#343434 !important; bottom:0; height:100%; left:0; overflow:hidden !important;  position:fixed; right:0; top:0; width:100%; z-index:99999; text-align:center;
+}
+.clear-love-loading { text-align: center;  position: absolute; top: 50%; left: 50%; margin-left: -152px; -webkit-box-sizing: border-box;-moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; display:inline-block;  text-align:center; transform: translateY(-50%); -webkit-transform: translateY(-50%); -o-transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%);}
+
 /*Loading Effect */
 .loading-effect{width:350px; height:350px;}
 .loading-effect span{float:left; margin-top:28px;}
@@ -372,7 +378,8 @@ hr{border-style:dashed; border-color:#d5d5d5; margin:50px 0;}
     font-size: 21px;
     margin: auto;
 }
-.srch_bar input{ border:1px solid #cdcdcd; border-width:0 0 1px 0; width:80%; padding:2px 0 4px 6px; background:none;}
+.srch_bar input{
+    border-width:0 0 1px 0; width:80%; padding:2px 0 4px 6px; background:none;}
 .srch_bar .input-group-addon button {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     border: medium none;
@@ -395,9 +402,8 @@ hr{border-style:dashed; border-color:#d5d5d5; margin:50px 0;}
     width: 88%;
 }
 i.iconLikes_ss {
-    background: url(../images/math/icon_like_ss.png) no-repeat top left;
     display: inline-block;
-    background-position: 0 0;
+    background: url(../images/math/icon_like_ss.png) no-repeat 0 0;
     width: 18px;
     height: 12px;
 }
@@ -715,7 +721,32 @@ label#image-css img{
 .like{
     color:#ff797a !important;
 }
+/*Chat*/
 
+#chatBox {
+    height: 500px;
+    padding: 0 15px;
+    border-top: 2px solid #dee2e6;
+    border-right: 2px solid #dee2e6;
+    border-left: 2px solid #dee2e6;
+}
+.message-input{
+    position: relative;
+}
+.message-item {
+    text-align: left;
+    float: left;
+    margin: 19px 0 10px 0;
+    color: #444950;
+    background-color: #f1f0f0;
+    min-width: 14px;
+    padding: 8px 15px;
+    border-radius: 22px;
+}
+.message-item .message-item-text{
+    font-size: 16px;
+    font-family: cursive;
+}
 /*-------------------------*/
 /* Jquery - Posts */
 /*-------------------------*/
@@ -739,6 +770,19 @@ label#image-css img{
 }
 .text-black-im{
     color: #3d3d3d !important;
+}
+#UserFends li {
+    height: 50px;
+}
+#UserFends li a{
+    height: 50px;
+}
+#UserFends li a img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px;
 }
 
 

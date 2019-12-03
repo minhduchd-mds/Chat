@@ -110,24 +110,19 @@ function ADD() {
                     }
                 });
                 list += '<tr>\n' +
-                    '                                                <td>' + stt + '</td>\n' +
+                    '                                                <td scope="row">' + stt + '</td>\n' +
+                    '                                                <td class="table-user">\n' +
+                    '                                                    <img src=" ' + data.avatar + '  "  class="mr-2 rounded-circle">'+ data.username +
+                    '                                                </td>' +
                     '                                                <td class="cut-text-hidden" title="' + data.password + '">' + data.email + '</td>\n' +
-                    // '                                                <td class="cut-text-hidden">' + data.password + '</td>\n' +
-                    '                                                <td class="cut-text-hidden">' + data.username + '</td>\n' +
                     '                                                <td class="cut-text-hidden">' + data.age + '</td>\n' +
                     '                                                <td class="cut-text-hidden">' + data.birthday + '</td>\n' +
                     '                                                <td class="cut-text-hidden">' + data.gender + '</td>\n' +
                     '                                                <td class="cut-text-hidden">' + data.address + '</td>\n' +
                     '                                                <td class="cut-text-hidden demission">' + data.job + '</td>\n' +
-
-
-                    '                                                <td class="table-user">\n' +
-                    '                                                    <img src="  ' + data.avatar + '  "  class="mr-2 rounded-circle">\n' +
-                    '                                                </td>\n' +
                     '\n' +
                     '\n' +
                     '                                                <td class="table-action">\n' +
-                    '                                                    <a href="" id="editusre" data-ids="' + ids + '" class="action-icon"> <i class="mdi mdi-pencil"></i></a>\n' +
                     '                                                    <a href="" id="deleteuser" data-ids="' + ids + '"  class="action-icon"> <i class="mdi mdi-delete"></i></a>\n' +
                     '                                                </td>\n' +
                     '                                            </tr>'

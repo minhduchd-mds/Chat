@@ -15,16 +15,21 @@ $(document).ready(function () {
 
             var add = data.address;
             // add.split(",")[0]
+
             if(add != null){
                 var city = add.split(",")[0];
+
             }
             if(add != null){
-                var state = add.split(",")[0];
+                var state = add.split(",")[1];
+
             }
             if(add != null){
-                var county = add.split(",")[0];
+                var county = add.split(",")[2];
+
             }
-            avatar +='<img src=" '+data.avatar +' " alt="avatar">';
+
+            avatar +='<img data-avatar="'+data.avatar +'" src=" '+data.avatar +' " alt="avatar">';
             var photo = '';
 
 
@@ -61,13 +66,13 @@ $(document).ready(function () {
                 '                            <div class="form-group col-md-6">\n' +
                 '                                <label for="phone">Điện thoại</label>\n' +
                 '<h5 class="viewsa">'+data.phone+'</h5>'+
-                '                                <input type="text" class="form-control" id="phone" value="'+data.phone+'" data-toggle="input-mask" data-mask-format="(00) 00000000" maxlength="14" required="">\n' +
+                '                                <input type="tel" class="form-control" id="phone" value="'+data.phone+'" data-toggle="input-mask" data-mask-format="(00) 00000000" maxlength="14" required="">\n' +
                 '                            </div>\n' +
                 '                            <div class="form-group col-md-6">\n' +
                 '                                <label for="maritalStatus">Tình trạng hôn nhân </label>\n' +
                 '<h5 class="viewsa">'+data.maritalStatus+'</h5>'+
                 '                                <select id="maritalStatus" class="custom-select age_from" required>\n' +
-                '                                    <option selected="" value="'+ data.maritalStatus +'" class="a">'+ data.maritalStatus +'</option>\n' +
+                '                                    <option  value="'+ data.maritalStatus +'" class="a">'+ data.maritalStatus +'</option>\n' +
                 '                                    <option value="Độc thân" class="a">Độc thân</option>\n' +
                 '                                    <option  value="Có con riêng" class="a">Có con riêng</option>\n' +
                 '                                    <option value="Ly thân" class="a">Ly thân</option>\n' +
@@ -77,7 +82,7 @@ $(document).ready(function () {
                 '                                <label for="educationLevel">Trình độ</label>\n' +
                 '<h5 class="viewsa">'+data.educationLevel+'</h5>'+
                 '                                <select id="educationLevel" class="custom-select age_from">\n' +
-                '                                    <option selected="" value="' + data.educationLevel + '" class="a">' + data.educationLevel + '</option>' +
+                '                                    <option  value="' + data.educationLevel + '" class="a">' + data.educationLevel + '</option>' +
                 '                                    <option value="Giáo sư" class="a">Giáo sư</option>\n' +
                 '                                    <option  value="Tiến sỹ" class="a">Tiến sỹ </option>\n' +
                 '                                    <option value="Đại học" class="a">Đại học</option>\n' +
@@ -91,7 +96,7 @@ $(document).ready(function () {
                 '                                    <label for="countryId">Chọn quốc gia</label>\n' +
                 '<h5 class="viewsa">'+county+'</h5>'+
                 '                                    <select name="country" class="custom-select countries" id="countryId" required>\n' +
-                '                                        <option value="' + county + '">' + county + '</option>\n' +
+                '                                        <option  value="' + county + '">' + county + '</option>\n' +
                 '                                        <option value="Việt Nam">Việt Nam</option>\n' +
                 '                                        <option value="Americas">Americas</option>\n' +
                 '                                        <option value="Europe">Europe</option>\n' +
@@ -103,7 +108,7 @@ $(document).ready(function () {
                 '                                <label for="stateId">Tỉnh/Thành phố</label>\n' +
                 '<h5 class="viewsa">'+state+'</h5>'+
                 '                                <select name="state" class="custom-select states" id="stateId" required>\n' +
-                '                                    <option selected="" value=" ' + state + ' ">' + state + '</option>\n' +
+                '                                    <option  value=" ' + state + ' ">' + state + '</option>\n' +
                 '                                    <option value="Hà Nội">Hà Nội</option>\n' +
                 '                                    <option value="Hồ Chí Minh">Hồ Chí Minh</option>\n' +
                 '                                    <option value="Đà Nẵng">Đà Nẵng</option>\n' +
@@ -135,7 +140,7 @@ $(document).ready(function () {
                 '                                <label for="cityId">Quận/Huyện </label>\n' +
                 '<h5 class="viewsa">'+city+'</h5>'+
                 '                                <select name="city" class="custom-select cities" id="cityId" required>\n' +
-                '                                    <option selected="" value="' + city + '">' + city + '</option>\n' +
+                '                                    <option  value="' + city + '">' + city + '</option>\n' +
                 '                                    <option value="Cầu Giấy">Cầu Giấy</option>\n' +
                 '                                    <option value="Mai Dịch">Mai Dịch</option>\n' +
                 '                                    <option value="Ba Đình">Ba Đình</option>\n' +
@@ -150,7 +155,7 @@ $(document).ready(function () {
                 '                                <label for="Hobby">Sở thích </label>\n' +
                 '<h5 class="viewsa">'+data.hobby+'</h5>'+
                 '                                <select id="Hobby" class="custom-select age_from" required="">\n' +
-                '                                    <option selected=""  value="' + data.hobby + '" class="a">' + data.hobby + '</option>\n' +
+                '                                    <option value="' + data.hobby + '" class="a">' + data.hobby + '</option>\n' +
                 '                                    <option value="Thích chó" class="a">Thích chó </option>\n' +
                 '                                    <option value="Thích mèo" class="a">Thích mèo</option>\n' +
                 '                                    <option value="Thích động vật có vú" class="a">Thích động vật có vú </option>\n' +
@@ -163,7 +168,7 @@ $(document).ready(function () {
                 '                                <label for="Job">Công Việc </label>\n' +
                 '<h5 class="viewsa">'+data.job+'</h5>'+
                 '                                <select id="Job" class="custom-select age_from" required="">\n' +
-                '                                    <option selected="" value="' + data.job + '" class="a">' + data.job + '</option>\n' +
+                '                                    <option  value="' + data.job + '" class="a">' + data.job + '</option>\n' +
                 '                                    <option value="Làm xây dựng" class="a">Làm xây dựng </option>\n' +
                 '                                    <option value="Tài chính" class="a">Tài chính </option>\n' +
                 '                                    <option value="Giáo viên" class="a">Giáo viên </option>\n' +
@@ -180,7 +185,7 @@ $(document).ready(function () {
                 '                            <div class="form-group col-md-6">\n' +
                 '                                <label for="avatar">Tải lên hình đại diện</label>\n' +
 
-                '                                <input type="file" class="form-control"  accept=\'image/*\' id="avatar" required="">\n' +
+                '                                <input type="file" class="form-control"  accept=\'image/*\' id="avatar" required>\n' +
                 '                                <span id="avatar-img"/>\n' +
                 '                            </div>\n' +
                 '                            <div class="form-group col-md-12">\n' +
@@ -196,40 +201,63 @@ $(document).ready(function () {
             $('.profile-user-show').html(profile);
             $('#photo').html(photo);
             $('.product-groups-avatar').html(avatar);
-            $('.form-control,.custom-select,#profile-list-submit').hide();
 
+            if(typeof data.job === 'undefined' ||
+                typeof data ===  'null' ||
+                typeof data.username === 'undefined' ||
+                // typeof data.hobby === 'undefined' ||
+                // typeof data.city === 'undefined'  ||
+                // typeof data.state === 'undefined' ||
+                // typeof data.county === 'undefined'||
+                // typeof data.educationLevel  === 'undefined' ||
+                // typeof data.maritalStatus  === 'undefined' ||
+                // typeof data.phone  === 'undefined' ||
+                // typeof data.birthday  === 'undefined' ||
+                // typeof data.gender  === 'undefined'
+                $(this).val('')  === 'undefined'
+        ){
+                    $('.form-control,.custom-select,#profile-list-submit').show();
+                    $('#postprofile,.viewsa').hide();
+                    $('#Users').find('input, select').val('');
+            }else {
+                $('.form-control,.custom-select,#profile-list-submit').hide();
+                $('#postprofile').on('click',function (e) {
+                    $('.form-control,.custom-select,#profile-list-submit').show();
+                    $('#postprofile,.viewsa').hide();
+                    e.preventDefault();
+                });
+            }
+            var user_img = new Array();
+            $('#user_img').on('change',function(e){
+                var files = e.target.files;
+                $.each(files, function(i, file){
+                    var reader = new FileReader();
+                    reader.readAsDataURL(file);
+                    reader.onload = function(e){
+                        user_img.push(e.target.result);
+                        var image = '<li class="nav-item">\n' +
+                            '<a class="nav-link">' +
+                            '                                <img  src="' + e.target.result + '" class="img-thumbnail">\n' +
+                            '                                <span class="btn remove"><i style="color: #fff" class="fa fa-remove"></i></span>\n' +
+                            '</a>' +
+                            '                            </li>';
+                        $('#view-img').append(image);
+                    };
+                });
+            });
+            $('body').on('click','.remove',function () {
 
-            // var user_img = new Array();
-            // $('#user_img').on('change',function(e){
-            //     var files = e.target.files;
-            //     $.each(files, function(i, file){
-            //         var reader = new FileReader();
-            //         reader.readAsDataURL(file);
-            //         reader.onload = function(e){
-            //             user_img.push(e.target.result);
-            //             var image = '<li class="nav-item">\n' +
-            //                 '<a class="nav-link">' +
-            //                 '                                <img  src="' + e.target.result + '" class="img-thumbnail">\n' +
-            //                 '                                <span class="btn remove"><i style="color: #fff" class="fa fa-remove"></i></span>\n' +
-            //                 '</a>' +
-            //                 '                            </li>';
-            //             $('#view-img').append(image);
-            //         };
-            //     });
-            // });
-            // $('body').on('click','.remove',function () {
-            //
-            //     var val = $(this).closest('.nav-item').find('.nav-link');
-            //     // var index = fileCollection.findIndex(function(item) {return item.src == val})
-            //     var index = user_img.findIndex(function(item)
-            //     {
-            //         val.remove();
-            //         return item.src == val;
-            //
-            //     });
-            //
-            //     user_img.splice(index, 1);
-            // });
+                var val = $(this).closest('.nav-item').find('.nav-link');
+                // var index = fileCollection.findIndex(function(item) {return item.src == val})
+                var index = user_img.findIndex(function(item)
+                {
+                    val.remove();
+                    return item.src == val;
+
+                });
+
+                user_img.splice(index, 1);
+            });
             $('#postprofile').on('click',function (e) {
                 $('.form-control,.custom-select,#profile-list-submit').show();
                 $('#postprofile,.viewsa').hide();
@@ -250,11 +278,13 @@ $(document).ready(function () {
                 var county = $('#countryId option:selected').val();
                 var state = $('#stateId option:selected').val();
 
-
+                if($(this).data('avatar') === null){
+                    var ids =  $(this).data('avatar');
+                }
                 var user = {
                     "email": id,
                     "username": fullname,
-                    "avatar": avatar,
+                    "avatar": avatar || ids,
                     "address": city +","+ state +","+ county,
                     "phone": phone,
                     "job": job,
@@ -293,72 +323,7 @@ $(document).ready(function () {
                 };
                 reader.readAsDataURL(files.files[0]);
             });
-            PhotoFireBase();
-            function PhotoFireBase() {
 
-                var config = {
-                    apiKey: "AIzaSyD67Yh-Q35CnMP1c2T5SQE8eBohx8QUIj4",
-                    authDomain: "chat-5ddd7.firebaseapp.com",
-                    databaseURL: "https://chat-5ddd7.firebaseio.com",
-                    projectId: "chat-5ddd7",
-                    storageBucket: "chat-5ddd7.appspot.com",
-                    messagingSenderId: "850707411995"
-                };
-                firebase.initializeApp(config);
-
-                var auth = firebase.auth();
-                var storageRef = firebase.storage().ref();
-
-                function handleFileSelect(evt) {
-                    evt.stopPropagation();
-                    evt.preventDefault();
-                    var file = evt.target.files[0];
-
-                    var metadata = {
-                        'contentType': file.type
-                    };
-
-                    // Push to child path.
-                    // [START oncomplete]
-                    storageRef.child('images/' + file.name).put(file, metadata).then(function(snapshot) {
-                        // Let's get a download URL for the file.
-                        snapshot.ref.getDownloadURL().then(function(url) {
-                            sessionStorage.setItem('urlTest',url);
-                            console.log('File available at', url);
-                            // [START_EXCLUDE]
-                            // document.getElementById('linkbox').innerHTML = '<img src="' +  url + '">Click For File</img>';
-                            // [END_EXCLUDE]
-                        });
-                    }).catch(function(error) {
-                        // [START onfailure]
-                        console.error('Upload failed:', error);
-                        // [END onfailure]
-                    });
-                    // [END oncomplete]
-                }
-
-                window.onload = function() {
-                    $('#user_img').addEventListener('change', handleFileSelect, false);
-                    $('#user_img').disabled = true;
-
-                    auth.onAuthStateChanged(function(user) {
-                        if (user) {
-                            console.log('Anonymous user signed-in.', user);
-                            document.getElementById('file').disabled = false;
-                        } else {
-                            console.log('There was no anonymous session. Creating a new anonymous user.');
-                            // Sign the user in anonymously since accessing Storage requires the user to be authorized.
-                            auth.signInAnonymously().catch(function(error) {
-                                if (error.code === 'auth/operation-not-allowed') {
-                                    window.alert('Anonymous Sign-in failed. Please make sure that you have enabled anonymous ' +
-                                        'sign-in on your Firebase project.');
-                                }
-                            });
-                        }
-                    });
-                }
-
-            }
         });
     }else {
         localStorage.removeItem('email');

@@ -80,7 +80,7 @@ $(document).ready(function () {
 
             }
         });
-        count = 1;
+        count = 0;
         $('body').on('click','#deleteMail',function (e) {
 
             var check = $('input[name=checkboxId]');

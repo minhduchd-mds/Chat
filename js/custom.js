@@ -72,7 +72,7 @@ var POTENZA = {};
      Tooltip
      *************************/
 
-    $('[data-toggle="tooltip"]').tooltip()
+    $('[data-toggle="tooltip"]').tooltip();
 
     /*************************
      Check if function exists
@@ -95,7 +95,7 @@ var POTENZA = {};
 
     POTENZA.alertm = function () {
         $("#load").fadeOut();
-        $('.alert-warning-').delay(30).fadeOut('slow');
+        $('.alert-warning-').delay(40).fadeOut('slow');
 
 
     };
@@ -167,7 +167,7 @@ var POTENZA = {};
             $(this).next().slideDown("easeOutExpo");
             return false;
         });
-    }
+    };
 
     /*************************
      owl-carousel
@@ -201,7 +201,7 @@ var POTENZA = {};
             });
 
         });
-    }
+    };
 
     /*************************
      Isotope
@@ -225,7 +225,7 @@ var POTENZA = {};
                 $(this).addClass('active');
             });
         }
-    }
+    };
 
 
     /*************************
@@ -261,7 +261,7 @@ var POTENZA = {};
                 fixedContentPos: false
             });
         }
-    }
+    };
 
 
     /*************************
@@ -279,7 +279,7 @@ var POTENZA = {};
             //     }
             // });
         }
-    }
+    };
 
     /*************************
      Progressbar
@@ -398,7 +398,7 @@ var POTENZA = {};
             $('#blog-list').html(thumb);
         });
 
-    }
+    };
 
     /*************************
      Countdown
@@ -427,7 +427,7 @@ var POTENZA = {};
             $('body,html').animate({scrollTop:0},1000);
             return false;
         });
-    }
+    };
 
 
     /*************************

@@ -1,26 +1,56 @@
 $(document).ready(function () {
-    var ms = new Array();
-    $('#image-css').on('change',function(e){
-        var icon = e.target.files;
-        $.each(icon, function(i, icons){
-             ms.push(m);
-            var reader = new FileReader();
-            reader.readAsDataURL(icons);
-            reader.onload = function(e){
-                var m = e.target.result;
-               
-                $.ajax({
-                    url: '',
-                    type: 'POST',
-                    data: JSON.stringify(ms),
-                    contentType: "application/json",
-                    success: function (data) {
-                    }
-                });
-            };
+    $(document).on("click", ".imgupload1", function() {
+        var a = $(this).attr("id");
+        $(".avatar-position").val(""),
+            $(".avatar-position").val(a),
+            $(".avatar-view").click()
+    }),
+        $(document).on("click", ".imgupload2", function() {
+            var a = $(this).attr("id");
+            $(".avatar-position").val(""),
+                $(".avatar-position").val(a),
+                $(".avatar-view2").click()
+        }),
+        $(document).on("click", ".imgupload3", function() {
+            var a = $(this).attr("id");
+            $(".avatar-position").val(""),
+                $(".avatar-position").val(a),
+                $(".avatar-view3").click()
+        }),
+        $(document).on("click", ".imgupload4", function() {
+            var a = $(this).attr("id");
+            $(".avatar-position").val(""),
+                $(".avatar-position").val(a),
+                $(".avatar-view4").click()
+        }),
+        $(document).on("click", ".remove-bg", function(a) {
+            a.stopPropagation();
+            var i = $(this).attr("data-position");
+            if ($(this).remove(),
+            "2" == i) {
+                var t = BASE_URL + "images/step/02.png";
+                $(".imgupload" + i).attr("src", +t)
+            }
+            if ("3" == i) {
+                t = BASE_URL + "images/step/03.png";
+                $(".imgupload" + i).attr("src", +t)
+            }
+            if ("4" == i) {
+                t = BASE_URL + "images/step/04.png";
+                $(".imgupload" + i).attr("src", +t)
+            }
+            $.ajax({
+                url: BASE_URL + "user/ajax_remove_gallery_image",
+                type: "POST",
+                data: {
+                    position: i
+                },
+                success: function(a) {
+                    var t = $.parseJSON(a);
+                    $(".imgupload" + i).attr("src", t.url)
+                }
+            })
         });
-        return icon;
-    });
     $.ajax({
         url: url,
         type: 'GET',
