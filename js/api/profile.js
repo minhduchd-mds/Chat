@@ -246,16 +246,13 @@ $(document).ready(function () {
                 });
             });
             $('body').on('click','.remove',function () {
-
                 var val = $(this).closest('.nav-item').find('.nav-link');
-                // var index = fileCollection.findIndex(function(item) {return item.src == val})
+                var index = fileCollection.findIndex(function(item) {return item.src == val})
                 var index = user_img.findIndex(function(item)
                 {
                     val.remove();
                     return item.src == val;
-
                 });
-
                 user_img.splice(index, 1);
             });
             $('#postprofile').on('click',function (e) {
