@@ -1,8 +1,8 @@
 $(document).ready(function () {
-    var getuser = "https://tinder-69.appspot.com/api/v1/user/";
+    const getuser = "https://tinder-69.appspot.com/api/v1/user/";
 
-    var id = localStorage.getItem('secretToken');
-   if(id){
+    const id = localStorage.getItem('secretToken');
+    if(id){
        ADD();
    }else {
        localStorage.removeItem('secretToken');
@@ -13,31 +13,34 @@ $(document).ready(function () {
        localStorage.removeItem('year');
        window.location.href = "login.html";
    }
+    // ADD();
 });
 function ADD() {
     $('#add-Users').on('submit', function (e) {
 
-        var avatar = sessionStorage.getItem('avatar');
-        var email = $('#email').val();
-        var password = $('#password').val();
-        var fullname = $('#fullname').val();
-        var job = $('#Job').val();
-        var phone = $('#phone').val();
-        var maritalStatus = $('#maritalStatus option:selected').val();
-        var educationLevel = $('#educationLevel option:selected').val();
-        var birthday = $('#birthday').val();
-        var gender = $('select#genderSDS').val();
-        var hoppy = $('select#Hobby').val();
-        var city = $('#cityId option:selected').val();
-        var county = $('#countryId option:selected').val();
-        var state = $('#stateId option:selected').val();
+        let type;
+        let url;
+        const avatar = sessionStorage.getItem('avatar');
+        const email = $('#email').val();
+        const password = $('#password').val();
+        const fullname = $('#fullname').val();
+        const job = $('#Job').val();
+        const phone = $('#phone').val();
+        const maritalStatus = $('#maritalStatus option:selected').val();
+        const educationLevel = $('#educationLevel option:selected').val();
+        const birthday = $('#birthday').val();
+        const gender = $('select#genderSDS').val();
+        const hoppy = $('select#Hobby').val();
+        const city = $('#cityId option:selected').val();
+        const county = $('#countryId option:selected').val();
+        const state = $('#stateId option:selected').val();
 
-        var user = {
+        const user = {
             "email": email,
             "password": password,
             "username": fullname,
             "avatar": avatar,
-            "address": city +","+ state +","+ county,
+            "address": city + "," + state + "," + county,
             "phone": phone,
             "job": job,
             "birthday": birthday,
@@ -48,12 +51,12 @@ function ADD() {
             "educationLevel": educationLevel
         };
         if (sessionStorage.getItem('listitem') != null) {
-            var id = sessionStorage.getItem('listitem');
-            var url = 'https://tinder-69.appspot.com/api/v1/user/';
-            var type = 'PUT';
+            const id = sessionStorage.getItem('listitem');
+            url = 'https://tinder-69.appspot.com/api/v1/user/';
+            type = 'PUT';
         } else {
-            var url = 'https://tinder-69.appspot.com/api/v1/user/';
-            var type = 'POST';
+            url = 'https://tinder-69.appspot.com/api/v1/user/';
+            type = 'POST';
         }
         $.ajax({
             url: url,
@@ -74,8 +77,8 @@ function ADD() {
     });
     $('body').on('click', '#deleteuser', function (e) {
         e.preventDefault();
-        var id =  $(this).data('ids');
-        var url = 'https://tinder-69.appspot.com/api/v1/user/' +id;
+        const id = $(this).data('ids');
+        const url = 'https://tinder-69.appspot.com/api/v1/user/' + id;
 
         $.ajax({
             url: url,
@@ -88,17 +91,17 @@ function ADD() {
         });
     });
 
-    var count = 0;
+    let count = 0;
     $.ajax({
         url: 'https://tinder-69.appspot.com/api/v1/user/',
         type: 'GET',
         success: function (dataz) {
-            var list = '';
+            let list = '';
 
             $.each(dataz, function (key, data) {
-                var stt = count;
-                var ids = data.email;
-                 //  put danh sach thanh vien
+                const stt = count;
+                const ids = data.email;
+                //  put danh sach thanh vien
                 $.ajax({
                     url: "https://api.mlab.com/api/1/databases/matrimony/collections/dashboard/5cb9461fe7179a264cf2f4a8&u=true?apiKey=GySvt0pxEYMX3O8Qu9hsQCLZv5r95Jig",
                     type: 'PUT',
@@ -112,7 +115,7 @@ function ADD() {
                 list += '<tr>\n' +
                     '                                                <td scope="row">' + stt + '</td>\n' +
                     '                                                <td class="table-user">\n' +
-                    '                                                    <img src=" ' + data.avatar + '  "  class="mr-2 rounded-circle">'+ data.username +
+                    '                                                    <img src=" ' + data.avatar + '  "  class="mr-2 rounded-circle" alt="' + data.username + '">'+ data.username +
                     '                                                </td>' +
                     '                                                <td class="cut-text-hidden" title="' + data.password + '">' + data.email + '</td>\n' +
                     '                                                <td class="cut-text-hidden">' + data.age + '</td>\n' +
@@ -138,22 +141,22 @@ function ADD() {
         // updete img , tải lên imgae nhiều file ,
 
     $('#avatar').on('change', function (e) {
-            var files = e.target;
-            var reader = new FileReader();
-            reader.onload = function () {
-                var dataURL = reader.result;
-                sessionStorage.setItem('avatar', dataURL);
+        const files = e.target;
+        const reader = new FileReader();
+        reader.onload = function () {
+            const dataURL = reader.result;
+            sessionStorage.setItem('avatar', dataURL);
             };
             reader.readAsDataURL(files.files[0]);
         });
 
-    var fileCollection = new Array();
+    const fileCollection = [];
     $('#update-img').on('change', function (e) {
-            var files = e.target.files;
+        const files = e.target.files;
 
-            $.each(files, function (i, file) {
+        $.each(files, function (i, file) {
 
-                var reader = new FileReader();
+                const reader = new FileReader();
                 reader.readAsDataURL(file);
                 reader.onload = function (e) {
                     fileCollection.push(e.target.result);
@@ -161,7 +164,7 @@ function ADD() {
                         '            <div class="p-2">\n' +
                         '                <div class="row align-items-center">\n' +
                         '                    <div class="col-auto">\n' +
-                        '<img class="avatar-sm rounded bg-light" src="' + e.target.result + ' " style="width: 5rem;">' +
+                        '<img class="avatar-sm rounded bg-light" src="' + e.target.result + ' " style="width: 5rem;" alt="'+e.target.result+'">' +
                         '                    </div>\n' +
                         '                    <div class="col pl-0">\n' +
                         '                        <a href="javascript:void(0);" class="text-muted font-weight-bold" data-dz-name="">' + file.name + '</a>\n' +
@@ -183,28 +186,28 @@ function ADD() {
         });
 }
 function edituesr(satarid) {
-    var avatar = sessionStorage.getItem('avatar');
-    var email = $('#email').val();
-    var password = $('#password').val();
-    var firtname = $('#firstName').val();
-    var lastname = $('#lastName').val();
-    var job = $('#Job').val();
-    var phone = $('#phone').val();
-    var maritalStatus = $('#maritalStatus option:selected').val();
-    var educationLevel = $('#educationLevel option:selected').val();
-    var birthday = $('#birthday').val();
-    var gender =  $('select#genderSDS').val();
-    var city =  $('#cityId option:selected').val();
-    var county =  $('#countryId option:selected').val();
-    var state =  $('#stateId option:selected').val();
+    const avatar = sessionStorage.getItem('avatar');
+    const email = $('#email').val();
+    const password = $('#password').val();
+    const firtname = $('#firstName').val();
+    const lastname = $('#lastName').val();
+    const job = $('#Job').val();
+    const phone = $('#phone').val();
+    const maritalStatus = $('#maritalStatus option:selected').val();
+    const educationLevel = $('#educationLevel option:selected').val();
+    const birthday = $('#birthday').val();
+    const gender = $('select#genderSDS').val();
+    const city = $('#cityId option:selected').val();
+    const county = $('#countryId option:selected').val();
+    const state = $('#stateId option:selected').val();
 
-    var user = {
+    const user = {
         "email": email,
         "password": password,
         "firstName": firtname,
         "lastName": lastname,
         "avatar": avatar,
-        "address":  city + state + county ,
+        "address": city + state + county,
         "phone": phone,
         "job": job,
         "birthday": birthday,

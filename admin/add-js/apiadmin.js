@@ -1,25 +1,26 @@
 $(document).ready(function () {
-    var Login  = "https://api.mlab.com/api/1/databases/matrimony/collections/account?apiKey=GySvt0pxEYMX3O8Qu9hsQCLZv5r95Jig";
-    var List = "../../json/post.json";
-    var Toplist = "../../json/toplist.json";
+    const Login = "https://api.mlab.com/api/1/databases/matrimony/collections/account?apiKey=GySvt0pxEYMX3O8Qu9hsQCLZv5r95Jig";
+    const login = "https://tinder-69.appspot.com/api/v1/login";
+    const List = "../../json/post.json";
+    const Toplist = "../../json/toplist.json";
     // // ========== Login SC ==========
 
    $('#btnlogin').on('click',function (e) {
        e.preventDefault();
        console.log('login')
-       var isValidEmail = true;
-       var isValidPassword = true;
-       var email = $('#emailaddress').val();
-       var password = $('#password').val();
+       let isValidEmail = true;
+       let isValidPassword = true;
+       const email = $('#emailaddress').val();
+       const password = $('#password').val();
 
-       if(email.length == 0){
+       if(email.length === 0){
            isValidEmail = false;
            $('.error-msgs').text('Nhap email');
        }else {
            isValidEmail = true;
            $('.error-msgs').remove();
        }
-       if(password.length == 0){
+       if(password.length === 0){
            isValidPassword = false;
            $('.error-msg').text('Nhap password');
        }else {
@@ -34,35 +35,50 @@ $(document).ready(function () {
        //     return true;
        // }
        if(isValidEmail && isValidPassword) {
-           var meberdata = {
+           const meberdata = {
                'email': email,
                'password': password
            };
 
            if(meberdata){
+               // $.ajax({
+               //     url: login,
+               //     type: 'POST',
+               //     data: JSON.stringify(meberdata),
+               //     contentType: 'application/json; charset=utf-8',
+               //     success: function (response) {
+               //         localStorage.setItem('secretToken', response.email);
+               //         localStorage.setItem('fullname', response.email);
+               //         // $.each(response, function (id, data) {
+               //         //
+               //         //     let error;
+               //         //     if(email === data.eamil && password === data.password){
+               //         //         window.location.href = 'index.html';
+               //         //         // localStorage.setItem('secretToken', data._id.$oid);
+               //         //         // localStorage.setItem('fullname', data.email);
+               //         //
+               //         //     }else {
+               //         //         error = '';
+               //         //         error +='<p class="text-muted mb-4">Nhập lại email hoặc password đã sai .</p>'
+               //         //     }
+               //         //     $('#error').html(error);
+               //         // });
+               //
+               //     },
+               //     error: function (response, message) {
+               //         alert('Có lỗi xảy ra. ' + message);
+               //     }
+               // });
                $.ajax({
-                   url: Login,
-                   type: 'GET',
-                   // data: JSON.stringify(Dashboards),
-                   contentType: 'application/json; charset=utf-8',
-                   success: function (response) {
-
-                       $.each(response, function (id, data) {
-
-                           if(email == data.eamil && password == data.password){
-                               window.location.href = 'index.html';
-                               localStorage.setItem('secretToken', data._id.$oid);
-                               localStorage.setItem('fullname', data.fullname);
-
-                           }else {
-                               var error ='';
-                               error +='<p class="text-muted mb-4">Nhập lại email hoặc password đã sai .</p>'
-                           }
-                           $('#error').html(error);
-                       });
+                   url: login,
+                   type: 'POST',
+                   data: JSON.stringify(meberdata),
+                   success: function (data) {
+                       window.location.href = 'profile.html';
+                       localStorage.setItem('secretToken', email);
                    },
                    error: function (response, message) {
-                       alert('Có lỗi xảy ra. ' + message);
+                       $('#Error-user').html('Email hoặc password sai. Vui lòng nhập lại ',message).css('color', '#c3bebe');
                    }
                });
            }
@@ -109,7 +125,7 @@ $(document).ready(function () {
         window.location.href = "login.html";
     });
 
-    var secretToken = localStorage.getItem('secretToken');
+    const secretToken = localStorage.getItem('secretToken');
     if(secretToken){
         blog();
         search();

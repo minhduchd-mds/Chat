@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     // Lay ra secretToken id cua user
-    var id =  localStorage.getItem('email');
+    const id = localStorage.getItem('email');
 
     if(id){
 

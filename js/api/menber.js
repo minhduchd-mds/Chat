@@ -1,15 +1,15 @@
 $(document).ready(function () {
-    var register = "https://tinder-69.appspot.com/api/v1/user/";
-    var login = "https://tinder-69.appspot.com/api/v1/login";
-    var forgot = "https://api.mlab.com/api/1/databases/matrimony/collections/messages?apiKey=GySvt0pxEYMX3O8Qu9hsQCLZv5r95Jig";
+    const register = "https://tinder-69.appspot.com/api/v1/user/";
+    const login = "https://tinder-69.appspot.com/api/v1/login";
+    const forgot = "https://api.mlab.com/api/1/databases/matrimony/collections/messages?apiKey=GySvt0pxEYMX3O8Qu9hsQCLZv5r95Jig";
     // // ========== Login SC ==========
 
     $('#btnLoginuser').click(function (e) {
 
-        var isValidEmail = true;
-        var isValidPassword = true;
-        var email = $('#emailLogin').val();
-        var password = $('#passLogin').val();
+        let isValidEmail = true;
+        let isValidPassword = true;
+        const email = $('#emailLogin').val();
+        const password = $('#passLogin').val();
         if(email.length === 0){
             isValidEmail = false;
             $('.error-msgs').text('Nhập email').css('color','#ff0000');
@@ -25,7 +25,7 @@ $(document).ready(function () {
             $('.error-msg').remove();
         }
         if(isValidEmail && isValidPassword) {
-            var meberdata = {
+            const meberdata = {
                 'email': email,
                 'password': password
             };
@@ -52,10 +52,10 @@ $(document).ready(function () {
     $('#btnregister').click( function (e) {
 
         // vanidate
-        var isValidEmail = true;
-        var isValidPassword = true;
-        var email = $('#email').val();
-        var password = $('#password').val();
+        let isValidEmail = true;
+        let isValidPassword = true;
+        const email = $('#email').val();
+        const password = $('#password').val();
         if(email.length === 0){
             isValidEmail = false;
             $('.error-msgs').text('Nhập email').css('color','#ff0000');
@@ -71,7 +71,7 @@ $(document).ready(function () {
             $('.error-msg').remove();
         }
         if(isValidEmail && isValidPassword){
-            var data = {
+            const data = {
                 "email": email,
                 "password": password
             };
@@ -110,12 +110,12 @@ $(document).ready(function () {
             $('.error').remove();
         }
         if (EmailPhone) {
-            var emailPhone = {
+            const emailPhone = {
 
-                "title":"Tìm lại password",
-                "name" : "",
+                "title": "Tìm lại password",
+                "name": "",
                 "email": emailPhones,
-                "messages":"",
+                "messages": "",
                 "date": (new Date())
 
             };

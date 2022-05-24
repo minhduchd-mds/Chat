@@ -2,9 +2,9 @@
 function ajaxCall() {
     this.send = function(data, url, method, success, type) {
         type = type||'json';
-        var successRes = function(data) {
+        const successRes = function (data) {
             success(data);
-        }
+        };
 
         var errorRes = function(e) {
 
@@ -24,12 +24,12 @@ function ajaxCall() {
 }
 
 function locationInfo() {
-    var rootUrl = "https://cors-anywhere.herokuapp.com//geodata.solutions/api/api.php";
+    const rootUrl = "https://cors-anywhere.herokuapp.com//geodata.solutions/api/api.php";
     //set default values
-    var username = 'demo';
-    var ordering = 'name';
+    const username = 'demo';
+    const ordering = 'name';
     //now check for set values
-    var addParams = '';
+    let addParams = '';
     if(jQuery("#gds_appid").length > 0) {
         addParams += '&appid=' + jQuery("#gds_appid").val();
     }
@@ -37,14 +37,14 @@ function locationInfo() {
         addParams += '&hash=' + jQuery("#gds_hash").val();
     }
 
-    var call = new ajaxCall();
+    const call = new ajaxCall();
 
     this.confCity = function(id) {
         //   console.log(id);
         //   console.log('started');
-        var url = rootUrl+'?type=confCity&countryId='+ jQuery('#countryId option:selected').attr('countryid') +'&stateId=' + jQuery('#stateId option:selected').attr('stateid') + '&cityId=' + id;
-        var method = "post";
-        var data = {};
+        const url = rootUrl + '?type=confCity&countryId=' + jQuery('#countryId option:selected').attr('countryid') + '&stateId=' + jQuery('#stateId option:selected').attr('stateid') + '&cityId=' + id;
+        const method = "post";
+        const data = {};
         call.send(data, url, method, function(data) {
             if(data){
                 //    alert(data);

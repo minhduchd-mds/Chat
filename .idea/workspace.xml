@@ -121,6 +121,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -232,6 +233,8 @@
       <workItem from="1581786938188" duration="491000" />
       <workItem from="1596791663499" duration="514000" />
       <workItem from="1597130536242" duration="36000" />
+      <workItem from="1622045748768" duration="2040000" />
+      <workItem from="1625972758746" duration="2000" />
     </task>
     <servers />
   </component>
@@ -251,17 +254,17 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/admin/add-js/apiadmin.js</url>
-          <line>208</line>
+          <line>224</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/admin/add-js/apiadmin.js</url>
-          <line>334</line>
+          <line>350</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/admin/add-js/apiadmin.js</url>
-          <line>73</line>
+          <line>89</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">

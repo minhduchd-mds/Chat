@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    var id = localStorage.getItem('secretToken');
+    const id = localStorage.getItem('secretToken');
     if(id){
         creatAcc();
         loginAcc();
@@ -26,29 +26,29 @@ $(document).ready(function () {
     }
    function creatAcc() {
        $('#add-Payment').on('submit',function (e) {
-           var email = $('#email').val();
-           var password = $('#password').val();
-           var firtname = $('#firstName').val();
-           var lastname = $('#lastName').val();
-           var price = $('#price').val();
-           var phone = $('#phone').val();
-           var birthday = $('#birthday').val();
-           var city =  $('#cityId option:selected').val();
-           var county =  $('#countryId option:selected').val();
-           var state =  $('#stateId option:selected').val();
-           var user = {
+           const email = $('#email').val();
+           const password = $('#password').val();
+           const firtname = $('#firstName').val();
+           const lastname = $('#lastName').val();
+           const price = $('#price').val();
+           const phone = $('#phone').val();
+           const birthday = $('#birthday').val();
+           const city = $('#cityId option:selected').val();
+           const county = $('#countryId option:selected').val();
+           const state = $('#stateId option:selected').val();
+           const user = {
                "email": email,
                "password": password,
-               "fullname": { first: firtname, last: lastname },
+               "fullname": {first: firtname, last: lastname},
                "birthday": birthday,
-               "address":{city:city, state: state,county:county},
-               "price":price,
+               "address": {city: city, state: state, county: county},
+               "price": price,
                "amount": 0,
                "boost": 0,
-               "total_amount":"0",
-               "product_name":"",
-               "created_at" : new Date(),
-               "key":phone
+               "total_amount": "0",
+               "product_name": "",
+               "created_at": new Date(),
+               "key": phone
 
            };
            $.ajax({
@@ -64,8 +64,8 @@ $(document).ready(function () {
        });
        $('body').on('click', '#delete', function (e) {
            e.preventDefault();
-           var id =  $(this).data('id');
-           var url = 'https://api.mlab.com/api/1/databases/matrimony/collections/payment/'+id+'?apiKey=GySvt0pxEYMX3O8Qu9hsQCLZv5r95Jig';
+           const id = $(this).data('id');
+           const url = 'https://api.mlab.com/api/1/databases/matrimony/collections/payment/' + id + '?apiKey=GySvt0pxEYMX3O8Qu9hsQCLZv5r95Jig';
 
            $.ajax({
                url: url,
@@ -84,18 +84,19 @@ $(document).ready(function () {
            });
        });
        Getlist();
-       var count = 0;
+       let count = 0;
+
        function Getlist() {
            $.ajax({
                url: 'https://api.mlab.com/api/1/databases/matrimony/collections/payment/?apiKey=GySvt0pxEYMX3O8Qu9hsQCLZv5r95Jig',
            }).done(function (data) {
-               var list = '';
+               let list = '';
                $.each(data, function (key, data) {
-                   var stt = count;
-                   var id = data._id.$oid; // mlab _id.$oid
-                   var price =  new Intl.NumberFormat('Vn-De').format(data.price);
-                   var pricer =  new Intl.NumberFormat('Vn-De').format(data.total_amount);
-                   var total_momeny =  new Intl.NumberFormat('Vn-De').format(data.price - data.total_amount);
+                   const stt = count;
+                   const id = data._id.$oid; // mlab _id.$oid
+                   const price = new Intl.NumberFormat('Vn-De').format(data.price);
+                   const pricer = new Intl.NumberFormat('Vn-De').format(data.total_amount);
+                   const total_momeny = new Intl.NumberFormat('Vn-De').format(data.price - data.total_amount);
                    list += '<tr>\n' +
                        '                                                <td>' + stt + '</td>\n' +
                        '                                                <td class="cut-text-hidden">' + data.email + '</td>\n' +
@@ -118,30 +119,30 @@ $(document).ready(function () {
    } 
    function loginAcc() {
        $('#btnlogin').on('click',function (e) {
-           var isValidEmail = true;
-           var isValidPassword = true;
-           var email = $('#emailaddress').val();
-           var password = $('#password').val();
+           let isValidEmail = true;
+           let isValidPassword = true;
+           const email = $('#emailaddress').val();
+           const password = $('#password').val();
 
-           if(email.length == 0){
+           if(email.length === 0){
                isValidEmail = false;
                $('.error-msgs').text('Nhap email');
            }else {
                isValidEmail = true;
                $('.error-msgs').remove();
            }
-           if(password.length == 0){
+           if(password.length === 0){
                isValidPassword = false;
                $('.error-msg').text('Nhap password');
            }else {
                isValidPassword = true;
                $('.error-msg').remove();
            }
-           var md5 = $.md5(password,true);
+           const md5 = $.md5(password, true);
            if(isValidEmail && isValidPassword) {
-               var meberdata = {
-                    "email":email,
-                    "password":md5,
+               const meberdata = {
+                   "email": email,
+                   "password": md5,
                };
                if(meberdata){
                    $.ajax({
@@ -152,13 +153,14 @@ $(document).ready(function () {
 
                            $.each(response, function (id, data) {
 
-                               if(email == data.eamil && password == data.password){
+                               let error;
+                               if(email === data.eamil && password === data.password){
                                    window.location.href = 'add-payment.html';
                                    localStorage.setItem('secretToken', data._id.$oid);
                                    localStorage.setItem('fullname', data.fullname);
 
                                }else {
-                                   var error ='';
+                                   error = '';
                                    error +='<p class="text-muted mb-4">Nhập lại email hoặc password đã sai .</p>'
                                }
                                $('#error').html(error);

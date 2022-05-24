@@ -1,19 +1,19 @@
 $(document).ready(function (key) {
 
 // =========== TOP USER ===========
-    var id = localStorage.getItem('secretToken');
+    const id = localStorage.getItem('secretToken');
 
     if(id){
-      var user_img = new Array();
-      $('#user_img').on('change',function(e){
-          var files = e.target.files;
-          $.each(files, function(i, file){
+        const user_img = new Array();
+        $('#user_img').on('change',function(e){
+            const files = e.target.files;
+            $.each(files, function(i, file){
               var reader = new FileReader();
               reader.readAsDataURL(file);
               // name.push(file.name);
               reader.onload = function(e){
                   user_img.push(e.target.result);
-                  var template ='<img class="form-control rounded bg-light" src=" '+e.target.result+' " >';
+                  const template = '<img class="form-control rounded bg-light" src=" ' + e.target.result + ' " >';
                   $('#view-img-avatar').append(template);
               };
           });
@@ -39,8 +39,8 @@ $(document).ready(function (key) {
               'date' : date
 
           };
-          var account = 'https://api.mlab.com/api/1/databases/matrimony/collections/account/'+id+'?apiKey=GySvt0pxEYMX3O8Qu9hsQCLZv5r95Jig';
-          var put = 'PUT';
+          const account = 'https://api.mlab.com/api/1/databases/matrimony/collections/account/' + id + '?apiKey=GySvt0pxEYMX3O8Qu9hsQCLZv5r95Jig';
+          const put = 'PUT';
 
 
           $.ajax({
