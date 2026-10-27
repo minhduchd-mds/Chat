@@ -1,4 +1,4 @@
-// Design Minh Duc
+// Design Nhóm phát triển
 $(document).ready(function (key) {
     var menberID = "https://tinder-69.appspot.com/api/v1/user/";
     var id = localStorage.getItem('email');
